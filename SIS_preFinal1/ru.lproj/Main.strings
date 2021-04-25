@@ -1,0 +1,27 @@
+
+/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[0] = "L"; ObjectID = "8QI-8S-3o0"; */
+"8QI-8S-3o0.segmentTitles[0]" = "L";
+
+/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[1] = "M"; ObjectID = "8QI-8S-3o0"; */
+"8QI-8S-3o0.segmentTitles[1]" = "M";
+
+/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[2] = "Q"; ObjectID = "8QI-8S-3o0"; */
+"8QI-8S-3o0.segmentTitles[2]" = "Q";
+
+/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[3] = "H"; ObjectID = "8QI-8S-3o0"; */
+"8QI-8S-3o0.segmentTitles[3]" = "H";
+
+/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "Gjs-K1-Ufa"; */
+"Gjs-K1-Ufa.title" = "Профиль";
+
+/* Class = "UILabel"; text = "Correction Level"; ObjectID = "ISF-Ep-H3i"; */
+"ISF-Ep-H3i.text" = "Correction Level";
+
+/* Class = "UITextView"; text = "Hello World!"; ObjectID = "TQG-6N-6C2"; */
+"TQG-6N-6C2.text" = "Иванов Иван Иванович КТбо1-1";
+
+/* Class = "UITabBarItem"; title = "QR-код"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "QR-код";
+
+/* Class = "UITabBarItem"; title = "Расписание"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Расписание";
