@@ -10,6 +10,10 @@
 		457CF9B12647E092002AF540 /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74A00FB49168604E6C12FE9 /* Pods_SIS.framework */; };
 		457CF9B22647E092002AF540 /* Pods_SIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F74A00FB49168604E6C12FE9 /* Pods_SIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		457CF9B52647E3D7002AF540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */; };
+		457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B626485BC7002AF540 /* AuthViewController.swift */; };
+		457CF9B926485BE9002AF540 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B826485BE9002AF540 /* SignInViewController.swift */; };
+		457CF9BB26485BF8002AF540 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9BA26485BF8002AF540 /* LoginViewController.swift */; };
+		457CF9BD26485C0B002AF540 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9BC26485C0B002AF540 /* PageViewController.swift */; };
 		458DB86926359EB700AE2AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86826359EB700AE2AA2 /* AppDelegate.swift */; };
 		458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */; };
 		458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86C26359EB700AE2AA2 /* ViewController.swift */; };
@@ -35,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		457CF9B626485BC7002AF540 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		457CF9B826485BE9002AF540 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		457CF9BA26485BF8002AF540 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		457CF9BC26485C0B002AF540 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		458DB86526359EB700AE2AA2 /* SIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458DB86826359EB700AE2AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +95,10 @@
 				458DB86C26359EB700AE2AA2 /* ViewController.swift */,
 				458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */,
 				458DB86E26359EB700AE2AA2 /* Main.storyboard */,
+				457CF9B626485BC7002AF540 /* AuthViewController.swift */,
+				457CF9B826485BE9002AF540 /* SignInViewController.swift */,
+				457CF9BA26485BF8002AF540 /* LoginViewController.swift */,
+				457CF9BC26485C0B002AF540 /* PageViewController.swift */,
 				458DB87126359EBA00AE2AA2 /* Assets.xcassets */,
 				458DB87326359EBA00AE2AA2 /* LaunchScreen.storyboard */,
 				458DB87626359EBA00AE2AA2 /* Info.plist */,
@@ -246,10 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457CF9BB26485BF8002AF540 /* LoginViewController.swift in Sources */,
 				458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */,
 				458DB86926359EB700AE2AA2 /* AppDelegate.swift in Sources */,
+				457CF9B926485BE9002AF540 /* SignInViewController.swift in Sources */,
+				457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */,
 				458DB89926359F8000AE2AA2 /* GeneratorViewController.swift in Sources */,
 				458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */,
+				457CF9BD26485C0B002AF540 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

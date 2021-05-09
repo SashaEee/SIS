@@ -5,12 +5,6 @@
       location = "group:SIS.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/air/SIS-FINAL/SIS/LaunchScreen.storyboard">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/air/SIS-FINAL/SIS/Main.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

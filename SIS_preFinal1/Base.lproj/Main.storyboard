@@ -11,7 +11,7 @@
         <!--Auth View Controller-->
         <scene sceneID="OgW-tP-L1Z">
             <objects>
-                <viewController id="RDQ-1a-Ese" customClass="AuthViewController" customModule="FirebaseWebinar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RDQ-1a-Ese" customClass="AuthViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wsb-as-Q72">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +24,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Регистрация"/>
                                         <connections>
+                                            <action selector="sigInPressed:" destination="RDQ-1a-Ese" eventType="touchUpInside" id="fQg-GS-g1r"/>
                                             <segue destination="HDh-DR-OA8" kind="show" id="Y9E-AX-69b"/>
                                         </connections>
                                     </button>
@@ -32,6 +33,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Авторизация"/>
                                         <connections>
+                                            <action selector="loginPressed:" destination="RDQ-1a-Ese" eventType="touchUpInside" id="eem-ah-Hvf"/>
                                             <segue destination="fwa-cQ-Qkb" kind="show" id="ILi-8E-8UZ"/>
                                         </connections>
                                     </button>
@@ -54,7 +56,7 @@
         <!--Login View Controller-->
         <scene sceneID="WeB-wb-wUT">
             <objects>
-                <viewController id="fwa-cQ-Qkb" customClass="LoginViewController" customModule="FirebaseWebinar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fwa-cQ-Qkb" customClass="LoginViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iRe-Xc-TV2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +81,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Авторизироваться"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="fwa-cQ-Qkb" eventType="touchUpInside" id="55J-Bd-PjI"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQi-8v-UTx">
                                         <rect key="frame" x="0.0" y="210" width="354" height="20.5"/>
@@ -102,6 +107,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YWE-2X-WYc"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="gZq-zh-hNC" id="ORu-pF-CgW"/>
+                        <outlet property="errorLabel" destination="XQi-8v-UTx" id="j3X-m1-AcM"/>
+                        <outlet property="loginButton" destination="qR8-kr-fPI" id="MQx-1W-vYO"/>
+                        <outlet property="passwordTextField" destination="Ri7-UC-j6V" id="U5L-wb-Y1M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Dc-x4-fQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +121,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="gcY-5K-zdI">
             <objects>
-                <viewController id="HDh-DR-OA8" customClass="SignInViewController" customModule="FirebaseWebinar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HDh-DR-OA8" customClass="SignInViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PyS-K3-do6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +156,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Зарегистрироваться"/>
+                                        <connections>
+                                            <action selector="signInPressed:" destination="HDh-DR-OA8" eventType="touchUpInside" id="Mb6-df-KpG"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4E-PV-N9R">
                                         <rect key="frame" x="0.0" y="350" width="354" height="20.5"/>
@@ -170,6 +184,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jfQ-K0-3St"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Nj6-fB-aRb" id="3G3-mC-1Ul"/>
+                        <outlet property="errorLabel" destination="A4E-PV-N9R" id="Nej-pN-nJN"/>
+                        <outlet property="firstNameTextField" destination="R8o-6N-H5u" id="hUc-aL-fcw"/>
+                        <outlet property="lastNameTextField" destination="nb0-aM-AoW" id="Bzp-g0-vzX"/>
+                        <outlet property="passwordTextField" destination="9ha-Cd-UEL" id="t9y-jM-JVF"/>
+                        <outlet property="signInButton" destination="2qx-hD-WLs" id="5w7-i2-aks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3x-tL-HN7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
