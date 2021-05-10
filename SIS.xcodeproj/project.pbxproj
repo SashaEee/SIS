@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C3252649485B00BBAB64 /* ProfileViewController.swift */; };
 		457CF9B12647E092002AF540 /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74A00FB49168604E6C12FE9 /* Pods_SIS.framework */; };
 		457CF9B22647E092002AF540 /* Pods_SIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F74A00FB49168604E6C12FE9 /* Pods_SIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		457CF9B52647E3D7002AF540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4507C3252649485B00BBAB64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		457CF9B626485BC7002AF540 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		457CF9B826485BE9002AF540 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */,
 				458DB86E26359EB700AE2AA2 /* Main.storyboard */,
 				457CF9B626485BC7002AF540 /* AuthViewController.swift */,
+				4507C3252649485B00BBAB64 /* ProfileViewController.swift */,
 				457CF9B826485BE9002AF540 /* SignInViewController.swift */,
 				457CF9BA26485BF8002AF540 /* LoginViewController.swift */,
 				457CF9BC26485C0B002AF540 /* PageViewController.swift */,
@@ -264,6 +267,7 @@
 				457CF9B926485BE9002AF540 /* SignInViewController.swift in Sources */,
 				457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */,
 				458DB89926359F8000AE2AA2 /* GeneratorViewController.swift in Sources */,
+				4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */,
 				458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */,
 				457CF9BD26485C0B002AF540 /* PageViewController.swift in Sources */,
 			);
