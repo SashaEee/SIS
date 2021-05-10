@@ -28,7 +28,13 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 		self.imageView.isUserInteractionEnabled = true // UIImageView is(was?) the only UIView class this defaults to false
 		
 		self.refreshQRCode()
-	}
+        addTapGestureToHideKeyboard()
+            }
+
+            func addTapGestureToHideKeyboard() {
+                let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
+                view.addGestureRecognizer(tapGesture)
+            }
 	
 	@IBAction func correctionLevelChanged(_ sender: Any) {
 		self.refreshQRCode()
