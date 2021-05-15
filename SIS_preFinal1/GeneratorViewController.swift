@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreImage
+import Firebase
+
+let dbs = Firestore.firestore()
+
 
 
 class GeneratorViewController: UIViewController, UITextViewDelegate {
@@ -15,11 +19,14 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
+    var textUser: String = ""
     
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+        getFireBase()
+        self.refreshQRCode()
+
 		self.textView.delegate = self
 		self.registerForKeyboardNotifications()
 		
@@ -47,6 +54,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	// MARK: - Generate QR Code
 	
 	func refreshQRCode() {
+        getFireBase()
 		let text:String = self.textView.text
 		
 		// Generate the image
@@ -71,6 +79,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	/// Then the resulting binary data is past as the input to a CIFilter which makes the QRCode for us
 	/// - Parameter text: The text to turn into a QRCode
 	func createQRCodeForString(_ text: String) -> CIImage?{
+        getFireBase()
         let data = text.data(using: .utf8)
 		
 		let qrFilter = CIFilter(name: "CIQRCodeGenerator")
@@ -145,4 +154,29 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 		self.scrollView.scrollIndicatorInsets = contentInsets;
 	}
     
+    func getFireBase(){
+        let user = Auth.auth().currentUser
+        if let user = user {
+            let email = user.email
+            print(user)
+            var docRef = db.collection("users").whereField("email", isEqualTo: email!)
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            let space = " "
+                            let firstname = document.get("firstname") as! String
+                            let lastname = document.get("lastname") as! String
+                            let middlename = document.get("middlename") as! String
+                            let group = document.get("group") as! String
+                            self.textUser = self.textUser + space + firstname + space +  lastname + space + middlename + space + group
+                            print (self.textUser)
+                        }
+                        
+                    }
+            }
+        }
+    }
 }
+

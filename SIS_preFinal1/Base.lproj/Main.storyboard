@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZTM-lA-8v8" userLabel="\">
-                                <rect key="frame" x="30" y="103" width="354" height="464"/>
+                                <rect key="frame" x="30" y="103" width="354" height="465"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4E-PV-N9R">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
@@ -184,7 +184,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-Cd-UEL">
-                                        <rect key="frame" x="0.0" y="368" width="354" height="40"/>
+                                        <rect key="frame" x="0.0" y="368" width="354" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Sw8-60-kq7"/>
                                         </constraints>
@@ -192,7 +192,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-hD-WLs">
-                                        <rect key="frame" x="0.0" y="431" width="354" height="33"/>
+                                        <rect key="frame" x="0.0" y="425" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="sD5-xr-MeF"/>
                                         </constraints>
@@ -351,7 +351,7 @@
         <!--Расписание-->
         <scene sceneID="V0y-bO-j4l">
             <objects>
-                <viewController id="nol-rN-h4b" customClass="ReaderViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nol-rN-h4b" customClass="CallendarViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pko-Tk-1OP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,7 +392,7 @@
         <!--Profile View Controller-->
         <scene sceneID="npX-C1-Yly">
             <objects>
-                <viewController id="ZA1-KM-1ag" customClass="ProfileViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadProfile" id="ZA1-KM-1ag" customClass="ProfileViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="95n-4d-nXB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,12 +453,27 @@
                             <constraint firstItem="Skb-Mt-VX2" firstAttribute="leading" secondItem="TAs-oD-O9I" secondAttribute="leading" constant="20" id="sqj-ao-FJH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1eR-gI-y8f"/>
+                    <navigationItem key="navigationItem" id="1eR-gI-y8f">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZUL-Do-FZC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2b7-Ze-9Yo">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Выйти"/>
+                                <connections>
+                                    <action selector="а:" destination="ZA1-KM-1ag" eventType="touchUpInside" id="i9t-rG-Ofp"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="signOutPressed:" destination="ZA1-KM-1ag" id="HNN-c1-v8i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstNameLabel" destination="ocd-WW-9n6" id="3tH-Ev-f6M"/>
                         <outlet property="groupLabel" destination="ocD-dv-65q" id="OHo-KT-PBA"/>
                         <outlet property="lastNameLabel" destination="XfU-ea-dBG" id="4Wn-ZZ-U0u"/>
                         <outlet property="middleNameLabel" destination="kr2-bJ-vp6" id="jK8-z0-0RR"/>
+                        <outlet property="signOutButton" destination="ZUL-Do-FZC" id="Kq4-me-hSC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnI-Fb-2VK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -488,7 +503,7 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
