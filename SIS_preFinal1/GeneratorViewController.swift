@@ -17,31 +17,24 @@ let dbs = Firestore.firestore()
 class GeneratorViewController: UIViewController, UITextViewDelegate {
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var imageView: UIImageView!
-	@IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: UILabel!
 	@IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
-    var textUser: String = ""
+    @IBOutlet weak var reButton: UIButton!
+    var textUser: String = "Пользователь не авторизован"
     
     
 	override func viewDidLoad() {
-		super.viewDidLoad()
-        getFireBase()
-        self.refreshQRCode()
-
-		self.textView.delegate = self
-		self.registerForKeyboardNotifications()
+        textView.alpha = 0
+                    getFireBase()
+                    self.refreshQRCode()
+                    let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.shareImage))
+                    self.imageView.addGestureRecognizer(longPress)
+                    self.imageView.isUserInteractionEnabled = true // UIImageView is(was?) the only UIView class this defaults to false
+                    super.viewDidLoad()
+        
 		
-		let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.shareImage))
-		self.imageView.addGestureRecognizer(longPress)
-		self.imageView.isUserInteractionEnabled = true // UIImageView is(was?) the only UIView class this defaults to false
-		
-		self.refreshQRCode()
-        addTapGestureToHideKeyboard()
             }
 
-            func addTapGestureToHideKeyboard() {
-                let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
-                view.addGestureRecognizer(tapGesture)
-            }
 	
 	@IBAction func correctionLevelChanged(_ sender: Any) {
 		self.refreshQRCode()
@@ -54,8 +47,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	// MARK: - Generate QR Code
 	
 	func refreshQRCode() {
-        getFireBase()
-		let text:String = self.textView.text
+        self.textView.text = self.textUser
+        let text:String = self.textView.text!
 		
 		// Generate the image
 		guard let qrCode:CIImage = self.createQRCodeForString(text) else {
@@ -79,7 +72,6 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	/// Then the resulting binary data is past as the input to a CIFilter which makes the QRCode for us
 	/// - Parameter text: The text to turn into a QRCode
 	func createQRCodeForString(_ text: String) -> CIImage?{
-        getFireBase()
         let data = text.data(using: .utf8)
 		
 		let qrFilter = CIFilter(name: "CIQRCodeGenerator")
@@ -118,41 +110,6 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 		}
 		return img
 	}
-	
-	
-	
-	
-	
-	// MARK: - Keyboard Handling
-    
-	
-	func registerForKeyboardNotifications(){
-		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardDidShowNotification, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
-	}
-	
-	@objc func keyboardWasShown(_ aNotification: NSNotification) {
-		let info = aNotification.userInfo!
-		let kbSize:CGSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
-		let contentInsets:UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
-		self.scrollView.contentInset = contentInsets
-		self.scrollView.scrollIndicatorInsets = contentInsets
-		
-		// If active text field is hidden by keyboard, scroll it so it's visible
-		// Your application might not need or want this behavior.
-		var aRect:CGRect = self.view.frame
-		aRect.size.height -= kbSize.height
-		if (!aRect.contains(self.textView.frame.origin)) {
-			let scrollPoint:CGPoint = CGPoint(x: 0, y: self.textView.frame.origin.y-kbSize.height)
-			self.scrollView.setContentOffset(scrollPoint, animated: true)
-		}
-	}
-	
-	@objc func keyboardWillBeHidden(_ aNotification: NSNotification) {
-		let contentInsets = UIEdgeInsets.zero
-		self.scrollView.contentInset = contentInsets;
-		self.scrollView.scrollIndicatorInsets = contentInsets;
-	}
     
     func getFireBase(){
         let user = Auth.auth().currentUser
@@ -163,20 +120,39 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
+                        self.textUser = "Пользователь не авторизован"
                     } else {
                         for document in querySnapshot!.documents {
+                            self.textUser=""
                             let space = " "
                             let firstname = document.get("firstname") as! String
                             let lastname = document.get("lastname") as! String
                             let middlename = document.get("middlename") as! String
                             let group = document.get("group") as! String
-                            self.textUser = self.textUser + space + firstname + space +  lastname + space + middlename + space + group
+                            self.textUser = self.textUser + lastname + space + firstname + space + middlename + space + group
+                            self.textView.text = self.textUser
                             print (self.textUser)
+                            self.refreshQRCode()
                         }
                         
                     }
             }
         }
     }
+    @IBAction func reButtonPressed(_ sender: Any) {
+        Auth.auth().addStateDidChangeListener { [self] (auth, user) in
+                if user == nil{
+                    print("Пользователь не авторизован")
+                    self.textUser = "Пользователь не авторизован"
+                    refreshQRCode()
+                    
+                } else {
+                    print("User is auth")
+                    getFireBase()
+                    refreshQRCode()
+                }
+    }
+    }
+    
 }
 

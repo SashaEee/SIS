@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZTM-lA-8v8" userLabel="\">
-                                <rect key="frame" x="30" y="103" width="354" height="465"/>
+                                <rect key="frame" x="30" y="103" width="354" height="464"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4E-PV-N9R">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
@@ -184,7 +184,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-Cd-UEL">
-                                        <rect key="frame" x="0.0" y="368" width="354" height="34"/>
+                                        <rect key="frame" x="0.0" y="368" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Sw8-60-kq7"/>
                                         </constraints>
@@ -192,7 +192,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-hD-WLs">
-                                        <rect key="frame" x="0.0" y="425" width="354" height="40"/>
+                                        <rect key="frame" x="0.0" y="431" width="354" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="sD5-xr-MeF"/>
                                         </constraints>
@@ -279,26 +279,22 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p1M-3T-3S9">
-                                        <rect key="frame" x="30" y="394" width="354" height="244"/>
+                                        <rect key="frame" x="30" y="394" width="354" height="122.5"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Иванов Иван Иванович КТбо1-1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rxu-Tq-Yht">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="180"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="7cr-md-l0C"/>
-                                                </constraints>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иван Иванов" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHV-eh-8RA">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correction Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-IV-FlI">
-                                                <rect key="frame" x="0.0" y="188" width="354" height="17"/>
+                                                <rect key="frame" x="0.0" y="28.5" width="354" height="17"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-eW-EVH">
-                                                <rect key="frame" x="0.0" y="213" width="354" height="32"/>
+                                                <rect key="frame" x="0.0" y="53.5" width="354" height="32"/>
                                                 <segments>
                                                     <segment title="L"/>
                                                     <segment title="M"/>
@@ -309,6 +305,13 @@
                                                     <action selector="correctionLevelChanged:" destination="oRz-WR-add" eventType="valueChanged" id="6hj-3e-RAc"/>
                                                 </connections>
                                             </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToK-WV-VsV">
+                                                <rect key="frame" x="0.0" y="92.5" width="354" height="30"/>
+                                                <state key="normal" title="Обновить код"/>
+                                                <connections>
+                                                    <action selector="reButtonPressed:" destination="oRz-WR-add" eventType="touchUpInside" id="YSL-OH-y5W"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -340,8 +343,9 @@
                     <connections>
                         <outlet property="correctionLevelSegmentControl" destination="B4t-eW-EVH" id="qHy-8y-n9q"/>
                         <outlet property="imageView" destination="rEq-Fk-REu" id="LjO-iE-x9F"/>
+                        <outlet property="reButton" destination="ToK-WV-VsV" id="6IF-u5-g7F"/>
                         <outlet property="scrollView" destination="lUD-Cf-3sc" id="8zK-io-ZQ5"/>
-                        <outlet property="textView" destination="rxu-Tq-Yht" id="nZ2-df-MVs"/>
+                        <outlet property="textView" destination="sHV-eh-8RA" id="X87-HX-8EW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLj-CI-z2k" sceneMemberID="firstResponder"/>
@@ -406,19 +410,19 @@
                                             <constraint firstAttribute="height" constant="220" id="s98-oA-3S1"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocd-WW-9n6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfU-ea-dBG">
                                         <rect key="frame" x="0.0" y="228" width="374" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="BAa-k8-0LT"/>
+                                            <constraint firstAttribute="height" constant="40" id="0nw-ML-6AP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfU-ea-dBG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocd-WW-9n6">
                                         <rect key="frame" x="0.0" y="276" width="374" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="0nw-ML-6AP"/>
+                                            <constraint firstAttribute="height" constant="40" id="BAa-k8-0LT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
@@ -503,11 +507,8 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
