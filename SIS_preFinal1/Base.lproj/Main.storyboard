@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZTM-lA-8v8" userLabel="\">
-                                <rect key="frame" x="30" y="103" width="354" height="464"/>
+                                <rect key="frame" x="30" y="103" width="354" height="759"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4E-PV-N9R">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
@@ -192,7 +192,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-hD-WLs">
-                                        <rect key="frame" x="0.0" y="431" width="354" height="33"/>
+                                        <rect key="frame" x="0.0" y="431" width="354" height="328"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="sD5-xr-MeF"/>
                                         </constraints>
@@ -261,7 +261,7 @@
         <!--QR-код-->
         <scene sceneID="N9c-8H-blw">
             <objects>
-                <viewController id="oRz-WR-add" customClass="GeneratorViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="privacyProtectionWindow" id="oRz-WR-add" customClass="GeneratorViewController" customModule="SIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qhz-sD-tRw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLj-CI-z2k" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="1600"/>
+            <point key="canvasLocation" x="-1181.1594202898552" y="1599.7767857142856"/>
         </scene>
         <!--Расписание-->
         <scene sceneID="V0y-bO-j4l">

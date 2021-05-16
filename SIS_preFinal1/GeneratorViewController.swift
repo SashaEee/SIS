@@ -21,21 +21,26 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	@IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
     @IBOutlet weak var reButton: UIButton!
     var textUser: String = "Пользователь не авторизован"
+    @IBOutlet weak var imageViewLock: UIImageView!
     
     
 	override func viewDidLoad() {
         textView.alpha = 0
-                    getFireBase()
-                    self.refreshQRCode()
-                    let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.shareImage))
-                    self.imageView.addGestureRecognizer(longPress)
+        getFireBase()
+        self.refreshQRCode()
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.shareImage))
+        self.imageView.addGestureRecognizer(longPress)
                     self.imageView.isUserInteractionEnabled = true // UIImageView is(was?) the only UIView class this defaults to false
                     super.viewDidLoad()
-        
-		
+        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
             }
 
-	
+    @objc func didTakeScreenshot(notification:Notification) -> Void {
+
+            print("Screen Shot Taken")
+        imageView.alpha = 0
+    }
+    
 	@IBAction func correctionLevelChanged(_ sender: Any) {
 		self.refreshQRCode()
 	}
@@ -46,7 +51,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	
 	// MARK: - Generate QR Code
 	
-	func refreshQRCode() {
+	func refreshQRCode() { //обновление QR-кода
         self.textView.text = self.textUser
         let text:String = self.textView.text!
 		
@@ -71,7 +76,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 	/// This string is converted to ISOLatin1 string encoding, not the usual UTF8.
 	/// Then the resulting binary data is past as the input to a CIFilter which makes the QRCode for us
 	/// - Parameter text: The text to turn into a QRCode
-	func createQRCodeForString(_ text: String) -> CIImage?{
+	func createQRCodeForString(_ text: String) -> CIImage?{ //создание QR-кода
         let data = text.data(using: .utf8)
 		
 		let qrFilter = CIFilter(name: "CIQRCodeGenerator")
@@ -111,7 +116,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 		return img
 	}
     
-    func getFireBase(){
+    func getFireBase(){ //Получаем данные с FireBase
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email
@@ -139,7 +144,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
             }
         }
     }
-    @IBAction func reButtonPressed(_ sender: Any) {
+    @IBAction func reButtonPressed(_ sender: Any) { //кнопка обновления QR-кода
         Auth.auth().addStateDidChangeListener { [self] (auth, user) in
                 if user == nil{
                     print("Пользователь не авторизован")

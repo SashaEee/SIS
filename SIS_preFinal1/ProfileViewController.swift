@@ -24,15 +24,16 @@ class ProfileViewController: UIViewController {
 
         
     override func viewDidLoad() {
+
         if (firstNameLabel.text == "Имя") {
-          //  signOutButton.setTitleTextAttributes("Войти", for: .Normal)
+            //signOutButton.title = "Войти"
 
         deleteLabel()
         
         checkAuth()
         } else {
-         //   signOutButton.setTitleTextAttributes("Выйти", for: .Normal)
-            
+           //signOutButton.title = "Выйти"
+
         }
     getUID()
     super.viewDidLoad()
@@ -40,12 +41,8 @@ class ProfileViewController: UIViewController {
     // Do any additional setup after loading the view.
 }
     
-    @IBAction func signOutPressed(_ sender: Any) {
-        print("A")
-        signOut()
-    }
-    @IBAction func а(_ sender: Any) {
-     //   signOutButton.titleLabel?.text = "Some text”
+
+    @IBAction func а(_ sender: Any) { //нажимаем на кнопку выхода
         print("B")
         signOut()
         deleteLabel()
@@ -53,7 +50,7 @@ class ProfileViewController: UIViewController {
     }
     
 
-    func getFireBase(){
+    func getFireBase(){ //Получаем данные с FireBase
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email
@@ -77,37 +74,39 @@ class ProfileViewController: UIViewController {
         }
     }
     
-func showModalAuth(){
+func showModalAuth(){ //Показать окно авторизации/регистрации
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let newvc = storyBoard.instantiateViewController(withIdentifier: "NavAuth")
         self.present(newvc, animated:true, completion:nil)
 }
     
-    func showLabel(){
+    func showLabel(){ //показываем данные
         self.firstNameLabel.alpha = 1
         self.lastNameLabel.alpha = 1
         self.middleNameLabel.alpha = 1
         self.groupLabel.alpha = 1
     }
-    func deleteLabel(){
+    func deleteLabel(){ //скрываем данные
         firstNameLabel.alpha = 0
         lastNameLabel.alpha = 0
         middleNameLabel.alpha = 0
         groupLabel.alpha = 0
     }
-    func checkAuth(){
+    func checkAuth(){ //проверяем авторизирован бользователь или нет
         Auth.auth().addStateDidChangeListener { [self] (auth, user) in
                 if user == nil{
                     print("Пользователь не авторизован")
+                    //signOutButton.title = "Войти"
                     self.showModalAuth()
                     
                 } else {
                     print("User is auth")
                     getFireBase()
+                    //signOutButton.title = "Выйти"
                 }
     }
     }
-    func signOut(){
+    func signOut(){ //выход из аккаунта
         print ("Выход выполнен")
         let firebaseAuth = Auth.auth()
        do {
@@ -117,7 +116,7 @@ func showModalAuth(){
        }
          
     }
-    func getUID(){
+    func getUID(){ //получаем UID устройства
         if let identifierForVendor = UIDevice.current.identifierForVendor {
             print("UID вашего устройства: ",identifierForVendor.uuidString)
         }
