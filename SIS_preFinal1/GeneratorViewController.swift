@@ -2,8 +2,7 @@
 //  FirstViewController.swift
 //  QR Codes
 //
-//  Created by Kyle Howells on 31/12/2019.
-//  Copyright © 2019 Kyle Howells. All rights reserved.
+//  Created by Sasha
 //
 
 import UIKit
