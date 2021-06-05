@@ -10,8 +10,15 @@ import Firebase
 
 let db = Firestore.firestore()
 
-
 class ProfileViewController: UIViewController {
+    
+    class ExpensiveObjectClass {
+        var firstName: String?
+        var lastName: String?
+        var bio: String = "I ♡ Swift!"
+    }
+
+
     
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
@@ -21,6 +28,7 @@ class ProfileViewController: UIViewController {
     
     var userID: String = ""
     var userName: String = ""
+
 
         
     override func viewDidLoad() {
@@ -121,4 +129,19 @@ func showModalAuth(){ //Показать окно авторизации/рег�
             print("UID вашего устройства: ",identifierForVendor.uuidString)
         }
     }
+    func cache() {
+        let cache = NSCache<NSString, ExpensiveObjectClass>()
+        let myObject: ExpensiveObjectClass
+
+        if let cachedVersion = cache.object(forKey: "CachedObject") {
+            // use the cached version
+            myObject = cachedVersion
+        } else {
+            // create it from scratch then store in the cache
+            myObject = ExpensiveObjectClass()
+            cache.setObject(myObject, forKey: "CachedObject")
+        }
+        //ExpensiveObjectClass.init().firstName
+    }
+
 }

@@ -350,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLj-CI-z2k" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1181.1594202898552" y="1599.7767857142856"/>
+            <point key="canvasLocation" x="-1229" y="904"/>
         </scene>
         <!--Расписание-->
         <scene sceneID="V0y-bO-j4l">
@@ -360,24 +360,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r7l-bT-eDq">
-                                <rect key="frame" x="79" y="298" width="256" height="300"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-VC-WAP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VMH-7Y-4vB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Расписание" image="calendar" catalog="system" id="WRP-B3-Y3D"/>
+                    <connections>
+                        <outlet property="webView" destination="Nw5-VC-WAP" id="2Yz-xb-Lzh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kg2-j3-Jhq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="885"/>
+            <point key="canvasLocation" x="-1230" y="1600"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3j4-Mz-kex">
             <objects>
                 <tabBarController id="gUm-lE-d67" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dGa-dF-8V4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mzw-NE-Cx3">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
