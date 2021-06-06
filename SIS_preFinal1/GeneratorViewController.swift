@@ -8,6 +8,8 @@
 import UIKit
 import CoreImage
 import Firebase
+import ScreenGuard
+
 
 let dbs = Firestore.firestore()
 
@@ -27,6 +29,9 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
        }
     
     override func viewDidLoad() {
+        ScreenGuardManager.shared.screenRecordDelegate = self
+        ScreenGuardManager.shared.listenForScreenRecord()
+        ScreenGuardManager.shared.guardScreenshot(for: self.view)
         textView.alpha = 0
         showActivityIndicator()
         getFireBase()
@@ -43,7 +48,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     @objc func didTakeScreenshot(notification:Notification) -> Void {
 
             print("Screen Shot Taken")
-        imageView.alpha = 0
+        showAlert(with: "Но так легко это не обойти😈", title: "Хорошая попытка!")
     }
     
     @IBAction func correctionLevelChanged(_ sender: Any) {
@@ -188,3 +193,27 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
             //UIApplication.shared.endIgnoringInteractionEvents()
     }
 }
+
+extension GeneratorViewController: ScreenRecordDelegate {
+    func screen(_ screen: UIScreen, didRecordStarted isRecording: Bool) {
+        showAlert(with: "Думал самый умный?)", title: "Ненене")
+    }
+    
+    func screen(_ screen: UIScreen, didRecordEnded isRecording: Bool) {
+        showAlert(with: "Всё равно не получится обойти", title: "Молодец!")
+    }
+    
+}
+extension GeneratorViewController {
+    
+    func showAlert(with message: String, title: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            alertController.dismiss(animated: true)
+        }
+        
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+}
+
