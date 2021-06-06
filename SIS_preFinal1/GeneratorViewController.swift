@@ -32,12 +32,10 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         getFireBase()
         self.refreshQRCode()
         brightness()
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.shareImage))
-        self.imageView.addGestureRecognizer(longPress)
-                    self.imageView.isUserInteractionEnabled = true // UIImageView is(was?) the only UIView class this defaults to false
-                    super.viewDidLoad()
+        super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
-        self.myTimer = Timer(timeInterval: 5.0, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
+        self.myTimer = Timer(timeInterval: 5.0, target: self, selector: #selector(refresh),  userInfo: nil, repeats: true)
+        showActivityIndicator()
                 RunLoop.main.add(self.myTimer, forMode: .default)
         
             }
@@ -76,7 +74,6 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         
         // Display
         self.imageView.image = UIImage(ciImage: scaledImage)
-
     }
     
     
@@ -102,27 +99,6 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     
     
     
-    
-    // MARK: Share Image
-    
-    @objc func shareImage() {
-        guard let image = self.imageView.image else {
-            return
-        }
-        let activityViewController = UIActivityViewController(activityItems: [ self.sharableImage(image) ], applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.imageView // so that iPads won't crash
-        // present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
-    }
-    // Lots of the share extensions don't seem to handle UIImage's originating from CoreImage images properly
-    // Even though it shouldn't be needed, re-rendering it seems to help reliablity of some sharing options
-    func sharableImage(_ image: UIImage) -> UIImage{
-        let renderer = UIGraphicsImageRenderer(size: image.size, format: image.imageRendererFormat)
-        let img = renderer.image { ctx in
-            image.draw(at: CGPoint.zero)
-        }
-        return img
-    }
     // MARK: - Получение данных
 
     func getFireBase(){ //Получаем данные с FireBase
