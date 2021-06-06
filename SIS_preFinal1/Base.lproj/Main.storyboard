@@ -184,7 +184,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ha-Cd-UEL">
-                                        <rect key="frame" x="0.0" y="368" width="354" height="40"/>
+                                        <rect key="frame" x="0.0" y="368" width="354" height="328"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Sw8-60-kq7"/>
                                         </constraints>
@@ -192,7 +192,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-hD-WLs">
-                                        <rect key="frame" x="0.0" y="431" width="354" height="328"/>
+                                        <rect key="frame" x="0.0" y="719" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="sD5-xr-MeF"/>
                                         </constraints>

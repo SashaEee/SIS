@@ -9,8 +9,10 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>SIS_preFinal1.xcscheme_^#shared#^_</key>
+		<key>SIS_preFinal1.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>

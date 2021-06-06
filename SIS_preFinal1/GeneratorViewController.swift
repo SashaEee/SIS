@@ -28,8 +28,10 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         textView.alpha = 0
+        showActivityIndicator()
         getFireBase()
         self.refreshQRCode()
+        brightness()
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.shareImage))
         self.imageView.addGestureRecognizer(longPress)
                     self.imageView.isUserInteractionEnabled = true // UIImageView is(was?) the only UIView class this defaults to false
@@ -74,6 +76,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         
         // Display
         self.imageView.image = UIImage(ciImage: scaledImage)
+
     }
     
     
@@ -145,6 +148,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
                             self.textView.text = self.textUser
                             print (self.textUser)
                             self.refreshQRCode()
+                            self.hideActivityIndicator()
                         }
                         
                     }
@@ -172,5 +176,39 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         print("Salt: ",salt)
         return salt
     }
-    
+    func brightness(){
+        UIScreen.main.brightness = CGFloat(1.0)
+    }
+        func showActivityIndicator() {
+            let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
+            activityIndicator.layer.cornerRadius = 6
+            activityIndicator.center = view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.style = .whiteLarge
+            activityIndicator.startAnimating()
+            //UIApplication.shared.beginIgnoringInteractionEvents()
+
+            activityIndicator.tag = 100 // 100 for example
+
+            // before adding it, you need to check if it is already has been added:
+            for subview in view.subviews {
+                if subview.tag == 100 {
+                    print("already added")
+                    return
+                }
+            }
+
+            view.addSubview(activityIndicator)
+        }
+
+        func hideActivityIndicator() {
+            let activityIndicator = view.viewWithTag(100) as? UIActivityIndicatorView
+            activityIndicator?.stopAnimating()
+
+            // I think you forgot to remove it?
+            activityIndicator?.removeFromSuperview()
+
+            //UIApplication.shared.endIgnoringInteractionEvents()
+    }
 }

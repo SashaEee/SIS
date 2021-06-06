@@ -12,11 +12,6 @@ let db = Firestore.firestore()
 
 class ProfileViewController: UIViewController {
     
-    class ExpensiveObjectClass {
-        var firstName: String?
-        var lastName: String?
-        var bio: String = "I ♡ Swift!"
-    }
 
 
     
@@ -32,7 +27,7 @@ class ProfileViewController: UIViewController {
 
         
     override func viewDidLoad() {
-
+        showActivityIndicator()
         if (firstNameLabel.text == "Имя") {
             //signOutButton.title = "Войти"
 
@@ -74,6 +69,7 @@ class ProfileViewController: UIViewController {
                             self.middleNameLabel.text = document.get("middlename") as? String
                             self.groupLabel.text = document.get("group") as? String
                             self.showLabel()
+                            self.hideActivityIndicator()
 
                         }
                         
@@ -129,19 +125,36 @@ func showModalAuth(){ //Показать окно авторизации/рег�
             print("UID вашего устройства: ",identifierForVendor.uuidString)
         }
     }
-    func cache() {
-        let cache = NSCache<NSString, ExpensiveObjectClass>()
-        let myObject: ExpensiveObjectClass
+    func showActivityIndicator() {
+        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
+        activityIndicator.layer.cornerRadius = 6
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .whiteLarge
+        activityIndicator.startAnimating()
+        //UIApplication.shared.beginIgnoringInteractionEvents()
 
-        if let cachedVersion = cache.object(forKey: "CachedObject") {
-            // use the cached version
-            myObject = cachedVersion
-        } else {
-            // create it from scratch then store in the cache
-            myObject = ExpensiveObjectClass()
-            cache.setObject(myObject, forKey: "CachedObject")
+        activityIndicator.tag = 100 // 100 for example
+
+        // before adding it, you need to check if it is already has been added:
+        for subview in view.subviews {
+            if subview.tag == 100 {
+                print("already added")
+                return
+            }
         }
-        //ExpensiveObjectClass.init().firstName
+
+        view.addSubview(activityIndicator)
     }
 
+    func hideActivityIndicator() {
+        let activityIndicator = view.viewWithTag(100) as? UIActivityIndicatorView
+        activityIndicator?.stopAnimating()
+
+        // I think you forgot to remove it?
+        activityIndicator?.removeFromSuperview()
+
+        //UIApplication.shared.endIgnoringInteractionEvents()
+}
 }
