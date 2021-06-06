@@ -29,16 +29,15 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
        }
     
     override func viewDidLoad() {
-        ScreenGuardManager.shared.screenRecordDelegate = self
-        ScreenGuardManager.shared.listenForScreenRecord()
-        ScreenGuardManager.shared.guardScreenshot(for: self.view)
-        textView.alpha = 0
+        ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
+        ScreenGuardManager.shared.listenForScreenRecord() //защита от скринов
+        ScreenGuardManager.shared.guardScreenshot(for: self.view) //защита от скринов
         showActivityIndicator()
         getFireBase()
         self.refreshQRCode()
         brightness()
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil) //уведомления от скринов
         self.myTimer = Timer(timeInterval: 5.0, target: self, selector: #selector(refresh),  userInfo: nil, repeats: true)
         showActivityIndicator()
                 RunLoop.main.add(self.myTimer, forMode: .default)
@@ -59,7 +58,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         self.refreshQRCode()
     }
     
-    // MARK: - Generate QR Code
+    // MARK: - Генерация QR-кода
     
     func refreshQRCode() { //обновление QR-кода
         self.textView.text = self.textUser
@@ -104,7 +103,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     
     
     
-    // MARK: - Получение данных
+    // MARK: - Получение данных из Firebase
 
     func getFireBase(){ //Получаем данные с FireBase
         let user = Auth.auth().currentUser
@@ -136,6 +135,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
             }
         }
     }
+    // MARK: - Кнопка обновления
+
     @IBAction func reButtonPressed(_ sender: Any) { //кнопка обновления QR-кода
         Auth.auth().addStateDidChangeListener { [self] (auth, user) in
                 if user == nil{
@@ -150,8 +151,9 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
                 }
     }
     }
-    
-    func randomSalt() -> String{ //получаем соль :))
+    // MARK: - Получаем соль
+
+    func randomSalt() -> String{
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let salt = String((0..<15).map{ _ in letters.randomElement()! })
         print("Salt: ",salt)
@@ -160,6 +162,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     func brightness(){
         UIScreen.main.brightness = CGFloat(1.0)
     }
+    // MARK: - Индикатор загрузки
+
         func showActivityIndicator() {
             let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
@@ -193,6 +197,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
             //UIApplication.shared.endIgnoringInteractionEvents()
     }
 }
+// MARK: - Защита от скриншотов
 
 extension GeneratorViewController: ScreenRecordDelegate {
     func screen(_ screen: UIScreen, didRecordStarted isRecording: Bool) {
@@ -208,7 +213,7 @@ extension GeneratorViewController {
     
     func showAlert(with message: String, title: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+        let okAction = UIAlertAction(title: "Понял, принял!", style: .default) { _ in
             alertController.dismiss(animated: true)
         }
         
