@@ -13,6 +13,7 @@ import ScreenGuard
 
 let dbs = Firestore.firestore()
 
+var second: Int = 0
 
 
 class GeneratorViewController: UIViewController, UITextViewDelegate {
@@ -20,26 +21,34 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var reButton: UIButton!
     var textUser: String = "Пользователь не авторизован"
     var myTimer: Timer!
-    @objc
-       func refresh() {
-        getFireBase()
+    @objc func refresh() {
+        second -= 1
+        self.timerLabel.text = "Код будет обновлен через: " + "\n" + "\(second)" +  " секунд"
+        if (second <= 0){
+            resetTimer()
+            getFireBase()
+         }
        }
+    func resetTimer(){
+        second = 15
+        self.timerLabel.text = "Код будет обновлен через: " + "\n" + "\(second)" +  " секунд"
+    }
     
     override func viewDidLoad() {
         ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
         ScreenGuardManager.shared.listenForScreenRecord() //защита от скринов
         ScreenGuardManager.shared.guardScreenshot(for: self.view) //защита от скринов
-        showActivityIndicator()
         getFireBase()
+        resetTimer()
         self.refreshQRCode()
         brightness()
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil) //уведомления от скринов
-        self.myTimer = Timer(timeInterval: 5.0, target: self, selector: #selector(refresh),  userInfo: nil, repeats: true)
-        showActivityIndicator()
+        self.myTimer = Timer(timeInterval: 1.0, target: self, selector: #selector(refresh),  userInfo: nil, repeats: true)
                 RunLoop.main.add(self.myTimer, forMode: .default)
         
             }
@@ -106,16 +115,18 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     // MARK: - Получение данных из Firebase
 
     func getFireBase(){ //Получаем данные с FireBase
+        showActivityIndicator()
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email
             print(user)
-            let salt = randomSalt() //получаем соль :))
+            let salt = getTime() //получаем соль :))
             var docRef = db.collection("users").whereField("email", isEqualTo: email!)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
-                        self.textUser = "Пользователь не авторизован"
+                        self.timerLabel.text = "Пользователь не авторизован"
+                        self.hideActivityIndicator()
                     } else {
                         for document in querySnapshot!.documents {
                             self.textUser=""
@@ -141,15 +152,17 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         Auth.auth().addStateDidChangeListener { [self] (auth, user) in
                 if user == nil{
                     print("Пользователь не авторизован")
-                    self.textUser = "Пользователь не авторизован"
+                    self.timerLabel.text = "Пользователь не авторизован"
                     refreshQRCode()
+                    hideActivityIndicator()
                     
                 } else {
                     print("User is auth")
                     getFireBase()
                     refreshQRCode()
+                    resetTimer()
                 }
-    }
+            }
     }
     // MARK: - Получаем соль
 
@@ -196,6 +209,12 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 
             //UIApplication.shared.endIgnoringInteractionEvents()
     }
+    // MARK: - Получение даты и времени
+
+    func getTime() -> String {
+        let dateTime = DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium)
+        return dateTime
+    }
 }
 // MARK: - Защита от скриншотов
 
@@ -209,6 +228,7 @@ extension GeneratorViewController: ScreenRecordDelegate {
     }
     
 }
+// MARK: - Уведомления
 extension GeneratorViewController {
     
     func showAlert(with message: String, title: String) {

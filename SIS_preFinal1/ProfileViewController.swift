@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
 
         
     override func viewDidLoad() {
-        showActivityIndicator()
         if (firstNameLabel.text == "Имя") {
             //signOutButton.title = "Войти"
 
@@ -54,6 +53,7 @@ class ProfileViewController: UIViewController {
     
 
     func getFireBase(){ //Получаем данные с FireBase
+        showActivityIndicator()
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email
