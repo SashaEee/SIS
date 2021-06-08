@@ -127,11 +127,11 @@ func showModalAuth(){ //Показать окно авторизации/рег�
     }
     func showActivityIndicator() {
         let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
+        activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:0.8)
         activityIndicator.layer.cornerRadius = 6
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .whiteLarge
+        activityIndicator.style = UIActivityIndicatorView.Style.whiteLarge
         activityIndicator.startAnimating()
         //UIApplication.shared.beginIgnoringInteractionEvents()
 

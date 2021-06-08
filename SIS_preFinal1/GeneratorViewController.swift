@@ -11,7 +11,6 @@ import Firebase
 import ScreenGuard
 
 
-let dbs = Firestore.firestore()
 
 var second: Int = 0
 
@@ -121,7 +120,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
             let email = user.email
             print(user)
             let salt = getTime() //получаем соль :))
-            var docRef = db.collection("users").whereField("email", isEqualTo: email!)
+            _ = db.collection("users").whereField("email", isEqualTo: email!)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
@@ -179,11 +178,11 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
 
         func showActivityIndicator() {
             let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-            activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
+            activityIndicator.backgroundColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:0.8)
             activityIndicator.layer.cornerRadius = 6
             activityIndicator.center = view.center
             activityIndicator.hidesWhenStopped = true
-            activityIndicator.style = .whiteLarge
+            activityIndicator.style = UIActivityIndicatorView.Style.whiteLarge
             activityIndicator.startAnimating()
             //UIApplication.shared.beginIgnoringInteractionEvents()
 
