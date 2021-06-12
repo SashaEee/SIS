@@ -58,7 +58,7 @@ class ProfileViewController: UIViewController {
         if let user = user {
             let email = user.email
             print(user)
-            var docRef = db.collection("users").whereField("email", isEqualTo: email!)
+        db.collection("users").whereField("email", isEqualTo: email!)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")

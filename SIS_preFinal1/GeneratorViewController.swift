@@ -21,7 +21,9 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var Ractangle: UIImageView!
     @IBOutlet weak var reButton: UIButton!
+    @IBOutlet weak var UserImage: UIImageView!
     var textUser: String = "Пользователь не авторизован"
     var myTimer: Timer!
     @objc func refresh() {
@@ -38,9 +40,11 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     }
     
     override func viewDidLoad() {
-        ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
-        ScreenGuardManager.shared.listenForScreenRecord() //защита от скринов
-        ScreenGuardManager.shared.guardScreenshot(for: self.view) //защита от скринов
+        design()
+        designUserImage()
+        //ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
+       // ScreenGuardManager.shared.listenForScreenRecord() //защита от скринов
+       // ScreenGuardManager.shared.guardScreenshot(for: self.view) //защита от скринов
         getFireBase()
         resetTimer()
         self.refreshQRCode()
@@ -120,7 +124,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
             let email = user.email
             print(user)
             let salt = getTime() //получаем соль :))
-            _ = db.collection("users").whereField("email", isEqualTo: email!)
+            db.collection("users").whereField("email", isEqualTo: email!)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
@@ -213,6 +217,19 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     func getTime() -> String {
         let dateTime = DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium)
         return dateTime
+    }
+    func design(){
+        Ractangle.layer.cornerRadius = 15
+    }
+    func designUserImage(){
+        //let UserImage = UIImageView(
+        //            image: UIImage(named: "input") // исходная картинка
+         //       )
+                UserImage.frame.size = CGSize(width: 100, height: 100) //размеры новой картинки
+                UserImage.layer.cornerRadius = 35
+                UserImage.clipsToBounds = true
+        UserImage.layer.borderColor = UIColor.white.cgColor // цвет рамки
+        UserImage.layer.borderWidth = 1.5 // толщина рамки
     }
 }
 // MARK: - Защита от скриншотов

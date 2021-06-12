@@ -14,6 +14,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'GoogleSignIn'
 pod 'ScreenGuard', '~> 0.0.1'
+pod 'PDTSimpleCalendar'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
 end

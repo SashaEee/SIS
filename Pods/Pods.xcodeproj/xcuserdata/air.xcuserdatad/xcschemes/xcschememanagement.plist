@@ -79,6 +79,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PDTSimpleCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SIS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
