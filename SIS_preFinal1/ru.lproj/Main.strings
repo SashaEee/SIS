@@ -1,27 +1,141 @@
 
-/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[0] = "L"; ObjectID = "8QI-8S-3o0"; */
-"8QI-8S-3o0.segmentTitles[0]" = "L";
+/* Class = "UINavigationItem"; title = "Расписание занятий"; ObjectID = "0i8-fh-7cK"; */
+"0i8-fh-7cK.title" = "Расписание занятий";
 
-/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[1] = "M"; ObjectID = "8QI-8S-3o0"; */
-"8QI-8S-3o0.segmentTitles[1]" = "M";
+/* Class = "UIButton"; configuration.title = "Зарегистрироваться"; ObjectID = "1GF-Mq-G7t"; */
+"1GF-Mq-G7t.configuration.title" = "Зарегистрироваться";
 
-/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[2] = "Q"; ObjectID = "8QI-8S-3o0"; */
-"8QI-8S-3o0.segmentTitles[2]" = "Q";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1GF-Mq-G7t"; */
+"1GF-Mq-G7t.normalTitle" = "Button";
 
-/* Class = "UISegmentedControl"; 8QI-8S-3o0.segmentTitles[3] = "H"; ObjectID = "8QI-8S-3o0"; */
-"8QI-8S-3o0.segmentTitles[3]" = "H";
+/* Class = "UINavigationItem"; title = "Личный кабинет"; ObjectID = "1eR-gI-y8f"; */
+"1eR-gI-y8f.title" = "Личный кабинет";
 
-/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "Gjs-K1-Ufa"; */
-"Gjs-K1-Ufa.title" = "Профиль";
+/* Class = "UILabel"; text = "Язык"; ObjectID = "1m6-qv-tMU"; */
+"1m6-qv-tMU.text" = "Язык";
 
-/* Class = "UILabel"; text = "Correction Level"; ObjectID = "ISF-Ep-H3i"; */
-"ISF-Ep-H3i.text" = "Correction Level";
+/* Class = "UITabBarItem"; title = "QR-код"; ObjectID = "1oI-tl-cDC"; */
+"1oI-tl-cDC.title" = "QR-код";
 
-/* Class = "UITextView"; text = "Hello World!"; ObjectID = "TQG-6N-6C2"; */
-"TQG-6N-6C2.text" = "Иванов Иван Иванович КТбо1-1";
+/* Class = "UIButton"; configuration.title = "Вход"; ObjectID = "2c9-Mj-G9H"; */
+"2c9-Mj-G9H.configuration.title" = "Вход";
 
-/* Class = "UITabBarItem"; title = "QR-код"; ObjectID = "acW-dT-cKf"; */
-"acW-dT-cKf.title" = "QR-код";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2c9-Mj-G9H"; */
+"2c9-Mj-G9H.normalTitle" = "Button";
 
-/* Class = "UITabBarItem"; title = "Расписание"; ObjectID = "cPa-gy-q4n"; */
-"cPa-gy-q4n.title" = "Расписание";
+/* Class = "UITextField"; placeholder = "Пароль"; ObjectID = "9ha-Cd-UEL"; */
+"9ha-Cd-UEL.placeholder" = "Пароль";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "A4E-PV-N9R"; */
+"A4E-PV-N9R.text" = "Label";
+
+/* Class = "UISegmentedControl"; B4t-eW-EVH.segmentTitles[0] = "L"; ObjectID = "B4t-eW-EVH"; */
+"B4t-eW-EVH.segmentTitles[0]" = "L";
+
+/* Class = "UISegmentedControl"; B4t-eW-EVH.segmentTitles[1] = "M"; ObjectID = "B4t-eW-EVH"; */
+"B4t-eW-EVH.segmentTitles[1]" = "M";
+
+/* Class = "UISegmentedControl"; B4t-eW-EVH.segmentTitles[2] = "Q"; ObjectID = "B4t-eW-EVH"; */
+"B4t-eW-EVH.segmentTitles[2]" = "Q";
+
+/* Class = "UISegmentedControl"; B4t-eW-EVH.segmentTitles[3] = "H"; ObjectID = "B4t-eW-EVH"; */
+"B4t-eW-EVH.segmentTitles[3]" = "H";
+
+/* Class = "UIButton"; normalTitle = "Регистрация"; ObjectID = "BFi-H5-GD1"; */
+"BFi-H5-GD1.normalTitle" = "Регистрация";
+
+/* Class = "UINavigationItem"; title = "Приватность"; ObjectID = "GT0-XZ-6nG"; */
+"GT0-XZ-6nG.title" = "Приватность";
+
+/* Class = "UITextField"; placeholder = "Отчество"; ObjectID = "JVK-A8-ctz"; */
+"JVK-A8-ctz.placeholder" = "Отчество";
+
+/* Class = "UITextField"; placeholder = "Почта"; ObjectID = "Nj6-fB-aRb"; */
+"Nj6-fB-aRb.placeholder" = "Почта";
+
+/* Class = "UILabel"; text = "Количество посещений"; ObjectID = "Nzy-0B-eoa"; */
+"Nzy-0B-eoa.text" = "Количество посещений";
+
+/* Class = "UITableViewSection"; headerTitle = "Настройки"; ObjectID = "Q60-uv-fZh"; */
+"Q60-uv-fZh.headerTitle" = "Настройки";
+
+/* Class = "UITextField"; placeholder = "Имя"; ObjectID = "R8o-6N-H5u"; */
+"R8o-6N-H5u.placeholder" = "Имя";
+
+/* Class = "UITextField"; placeholder = "Пароль"; ObjectID = "Ri7-UC-j6V"; */
+"Ri7-UC-j6V.placeholder" = "Пароль";
+
+/* Class = "UITextField"; placeholder = "Номер учебной группы"; ObjectID = "Scj-1S-XWY"; */
+"Scj-1S-XWY.placeholder" = "Номер учебной группы";
+
+/* Class = "UITabBarItem"; title = "Расписание"; ObjectID = "WRP-B3-Y3D"; */
+"WRP-B3-Y3D.title" = "Расписание";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XQi-8v-UTx"; */
+"XQi-8v-UTx.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Авторизация"; ObjectID = "YWE-2X-WYc"; */
+"YWE-2X-WYc.title" = "Авторизация";
+
+/* Class = "UINavigationItem"; title = "QR-код"; ObjectID = "ZSi-ei-P2R"; */
+"ZSi-ei-P2R.title" = "QR-код";
+
+/* Class = "UILabel"; text = "Внешний вид"; ObjectID = "b9x-9l-Cy6"; */
+"b9x-9l-Cy6.text" = "Внешний вид";
+
+/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "dZf-sF-0aR"; */
+"dZf-sF-0aR.title" = "Профиль";
+
+/* Class = "UILabel"; text = "Посмотреть статистику"; ObjectID = "frF-50-qCS"; */
+"frF-50-qCS.text" = "Посмотреть статистику";
+
+/* Class = "UIBarButtonItem"; title = "restore"; ObjectID = "g6k-9d-rdQ"; */
+"g6k-9d-rdQ.title" = "restore";
+
+/* Class = "UITextField"; placeholder = "Почта"; ObjectID = "gZq-zh-hNC"; */
+"gZq-zh-hNC.placeholder" = "Почта";
+
+/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "i5N-lR-cPR"; */
+"i5N-lR-cPR.title" = "Профиль";
+
+/* Class = "UINavigationItem"; title = "Регистрация"; ObjectID = "jfQ-K0-3St"; */
+"jfQ-K0-3St.title" = "Регистрация";
+
+/* Class = "UITextField"; placeholder = "Фамилия"; ObjectID = "nb0-aM-AoW"; */
+"nb0-aM-AoW.placeholder" = "Фамилия";
+
+/* Class = "UIButton"; normalTitle = "Авторизация"; ObjectID = "oaO-Iv-Dge"; */
+"oaO-Iv-Dge.normalTitle" = "Авторизация";
+
+/* Class = "UILabel"; text = "Группа"; ObjectID = "ocD-dv-65q"; */
+"ocD-dv-65q.text" = "Группа";
+
+/* Class = "UILabel"; text = "Имя"; ObjectID = "ocd-WW-9n6"; */
+"ocd-WW-9n6.text" = "Имя";
+
+/* Class = "UINavigationItem"; title = "Уведомления"; ObjectID = "s2d-i4-kVq"; */
+"s2d-i4-kVq.title" = "Уведомления";
+
+/* Class = "UILabel"; text = "Иван Иванов"; ObjectID = "sHV-eh-8RA"; */
+"sHV-eh-8RA.text" = "Иван Иванов";
+
+/* Class = "UINavigationItem"; title = "Внешний вид"; ObjectID = "uha-c7-hVk"; */
+"uha-c7-hVk.title" = "Внешний вид";
+
+/* Class = "UILabel"; text = "Уведомления"; ObjectID = "ukN-2s-r6X"; */
+"ukN-2s-r6X.text" = "Уведомления";
+
+/* Class = "UINavigationItem"; title = "Язык"; ObjectID = "xqC-GK-8GF"; */
+"xqC-GK-8GF.title" = "Язык";
+
+/* Class = "UINavigationItem"; title = "Вход"; ObjectID = "yIY-HA-3F2"; */
+"yIY-HA-3F2.title" = "Вход";
+
+/* Class = "UINavigationItem"; title = "Статистика посещений"; ObjectID = "yYB-BX-xku"; */
+"yYB-BX-xku.title" = "Статистика посещений";
+
+/* Class = "UILabel"; text = "Приватность"; ObjectID = "yhl-89-dRi"; */
+"yhl-89-dRi.text" = "Приватность";
+
+/* Class = "UIButton"; normalTitle = "Photo"; ObjectID = "z69-sC-7Bg"; */
+"z69-sC-7Bg.normalTitle" = "Photo";

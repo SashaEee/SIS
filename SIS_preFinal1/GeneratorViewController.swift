@@ -9,10 +9,12 @@ import UIKit
 import CoreImage
 import Firebase
 import ScreenGuard
+import FirebaseInstallations
 
 
 
 var second: Int = 0
+var isVertical : Bool = false
 
 
 class GeneratorViewController: UIViewController, UITextViewDelegate {
@@ -22,7 +24,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var Ractangle: UIImageView!
-    @IBOutlet weak var reButton: UIButton!
+    @IBOutlet weak var reButton: UIBarButtonItem!
+    
     @IBOutlet weak var UserImage: UIImageView!
     var textUser: String = "Пользователь не авторизован"
     var myTimer: Timer!
@@ -151,7 +154,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     }
     // MARK: - Кнопка обновления
 
-    @IBAction func reButtonPressed(_ sender: Any) { //кнопка обновления QR-кода
+    @IBAction func reButtonPressed(_ sender: Any) {
+        //кнопка обновления QR-кода
         Auth.auth().addStateDidChangeListener { [self] (auth, user) in
                 if user == nil{
                     print("Пользователь не авторизован")
@@ -165,9 +169,9 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
                     refreshQRCode()
                     resetTimer()
                 }
-            }
+        }
     }
-    // MARK: - Получаем соль
+// MARK: - Получаем соль
 
     func randomSalt() -> String{
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -257,4 +261,3 @@ extension GeneratorViewController {
         present(alertController, animated: true)
     }
 }
-

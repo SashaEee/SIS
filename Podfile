@@ -12,9 +12,8 @@ pod 'Firebase/Analytics'
 # For example, to use Firebase Authentication and Cloud Firestore
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
-pod 'GoogleSignIn'
+pod 'Firebase/Storage'
 pod 'ScreenGuard', '~> 0.0.1'
-pod 'PDTSimpleCalendar'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
 end

@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C3252649485B00BBAB64 /* ProfileViewController.swift */; };
 		4507C328264A7AF500BBAB64 /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C327264A7AF500BBAB64 /* CallendarViewController.swift */; };
+		455BABC2268B101B0019AF89 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455BABC0268B101B0019AF89 /* Interface.storyboard */; };
+		455BABC4268B101D0019AF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455BABC3268B101D0019AF89 /* Assets.xcassets */; };
+		455BABCA268B101E0019AF89 /* SIS Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		455BABD5268B101F0019AF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455BABD4268B101F0019AF89 /* Assets.xcassets */; };
+		455BABD9268B101F0019AF89 /* SIS Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 455BABBE268B101B0019AF89 /* SIS Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		455BAC0D268B10860019AF89 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BABFD268B106F0019AF89 /* ComplicationController.swift */; };
+		455BAC0E268B10860019AF89 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BABFB268B106F0019AF89 /* ExtensionDelegate.swift */; };
+		455BAC0F268B10860019AF89 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BABF9268B106F0019AF89 /* InterfaceController.swift */; };
+		455BAC11268B11500019AF89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455BAC10268B11500019AF89 /* GoogleService-Info.plist */; };
+		455BAC12268B11500019AF89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455BAC10268B11500019AF89 /* GoogleService-Info.plist */; };
 		457CF9B22647E092002AF540 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		457CF9B52647E3D7002AF540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */; };
 		457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B626485BC7002AF540 /* AuthViewController.swift */; };
@@ -25,7 +35,35 @@
 		6F6851F64E07B14E52588FCF /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149DD9C8C170E8808FD59248 /* Pods_SIS.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		455BABCB268B101E0019AF89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 458DB85D26359EB700AE2AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 455BABC8268B101E0019AF89;
+			remoteInfo = "SIS Watch Extension";
+		};
+		455BABD7268B101F0019AF89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 458DB85D26359EB700AE2AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 455BABBD268B101B0019AF89;
+			remoteInfo = "SIS Watch";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		455BABDD268B101F0019AF89 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				455BABCA268B101E0019AF89 /* SIS Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		457CF9B32647E092002AF540 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,12 +75,35 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45BC59912680AF5E00C699EE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				455BABD9268B101F0019AF89 /* SIS Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		149DD9C8C170E8808FD59248 /* Pods_SIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4507C3252649485B00BBAB64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4507C327264A7AF500BBAB64 /* CallendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
+		455079B0267CA1E30041C7E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		455079B2267CA2450041C7E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		455BABBE268B101B0019AF89 /* SIS Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SIS Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		455BABC1268B101B0019AF89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		455BABC3268B101D0019AF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SIS Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		455BABD4268B101F0019AF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		455BABD6268B101F0019AF89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455BABF9268B106F0019AF89 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "../SIS Watch1 WatchKit Extension/InterfaceController.swift"; sourceTree = "<group>"; };
+		455BABFB268B106F0019AF89 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../SIS Watch1 WatchKit Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
+		455BABFD268B106F0019AF89 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComplicationController.swift; path = "../SIS Watch1 WatchKit Extension/ComplicationController.swift"; sourceTree = "<group>"; };
+		455BAC10268B11500019AF89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "SIS_preFinal1/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		457CF9B626485BC7002AF540 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		457CF9B826485BE9002AF540 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +123,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		455BABC6268B101E0019AF89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458DB86226359EB700AE2AA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,9 +149,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		455BABBF268B101B0019AF89 /* SIS Watch */ = {
+			isa = PBXGroup;
+			children = (
+				455BABC0268B101B0019AF89 /* Interface.storyboard */,
+				455BABC3268B101D0019AF89 /* Assets.xcassets */,
+			);
+			path = "SIS Watch";
+			sourceTree = "<group>";
+		};
+		455BABCD268B101E0019AF89 /* SIS Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				455BABF9268B106F0019AF89 /* InterfaceController.swift */,
+				455BABFB268B106F0019AF89 /* ExtensionDelegate.swift */,
+				455BABFD268B106F0019AF89 /* ComplicationController.swift */,
+				455BABD4268B101F0019AF89 /* Assets.xcassets */,
+				455BABD6268B101F0019AF89 /* Info.plist */,
+				455BAC10268B11500019AF89 /* GoogleService-Info.plist */,
+			);
+			path = "SIS Watch Extension";
+			sourceTree = "<group>";
+		};
 		458DB85C26359EB700AE2AA2 = {
 			isa = PBXGroup;
 			children = (
+				455BABBF268B101B0019AF89 /* SIS Watch */,
+				455BABCD268B101E0019AF89 /* SIS Watch Extension */,
 				458DB86626359EB700AE2AA2 /* Products */,
 				458DB86726359EB700AE2AA2 /* SIS_preFinal1 */,
 				88A67E60630B4F346F423D3D /* Pods */,
@@ -95,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				458DB86526359EB700AE2AA2 /* SIS.app */,
+				455BABBE268B101B0019AF89 /* SIS Watch.app */,
+				455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +227,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		455BABBD268B101B0019AF89 /* SIS Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455BABDE268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch" */;
+			buildPhases = (
+				455BABBC268B101B0019AF89 /* Resources */,
+				455BABDD268B101F0019AF89 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				455BABCC268B101E0019AF89 /* PBXTargetDependency */,
+			);
+			name = "SIS Watch";
+			productName = "SIS Watch";
+			productReference = 455BABBE268B101B0019AF89 /* SIS Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		455BABC8268B101E0019AF89 /* SIS Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455BABDA268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch Extension" */;
+			buildPhases = (
+				455BABC5268B101E0019AF89 /* Sources */,
+				455BABC6268B101E0019AF89 /* Frameworks */,
+				455BABC7268B101E0019AF89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SIS Watch Extension";
+			productName = "SIS Watch Extension";
+			productReference = 455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		458DB86426359EB700AE2AA2 /* SIS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 458DB88F26359EBA00AE2AA2 /* Build configuration list for PBXNativeTarget "SIS" */;
@@ -143,11 +271,12 @@
 				458DB86326359EB700AE2AA2 /* Resources */,
 				457CF9B32647E092002AF540 /* Embed Frameworks */,
 				DB51E99870A1C47D9A8B5A2E /* [CP] Embed Pods Frameworks */,
-				59D7E0176BDFA3595931EED6 /* [CP] Copy Pods Resources */,
+				45BC59912680AF5E00C699EE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				455BABD8268B101F0019AF89 /* PBXTargetDependency */,
 			);
 			name = SIS;
 			productName = SIS_preFinal1;
@@ -160,9 +289,15 @@
 		458DB85D26359EB700AE2AA2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					455BABBD268B101B0019AF89 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					455BABC8268B101E0019AF89 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					458DB86426359EB700AE2AA2 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -175,6 +310,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 458DB85C26359EB700AE2AA2;
 			productRefGroup = 458DB86626359EB700AE2AA2 /* Products */;
@@ -182,11 +318,32 @@
 			projectRoot = "";
 			targets = (
 				458DB86426359EB700AE2AA2 /* SIS */,
+				455BABBD268B101B0019AF89 /* SIS Watch */,
+				455BABC8268B101E0019AF89 /* SIS Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		455BABBC268B101B0019AF89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455BABC4268B101D0019AF89 /* Assets.xcassets in Resources */,
+				455BABC2268B101B0019AF89 /* Interface.storyboard in Resources */,
+				455BAC11268B11500019AF89 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		455BABC7268B101E0019AF89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455BABD5268B101F0019AF89 /* Assets.xcassets in Resources */,
+				455BAC12268B11500019AF89 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458DB86326359EB700AE2AA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,23 +380,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		59D7E0176BDFA3595931EED6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SIS/Pods-SIS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SIS/Pods-SIS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIS/Pods-SIS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DB51E99870A1C47D9A8B5A2E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +400,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		455BABC5268B101E0019AF89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455BAC0E268B10860019AF89 /* ExtensionDelegate.swift in Sources */,
+				455BAC0D268B10860019AF89 /* ComplicationController.swift in Sources */,
+				455BAC0F268B10860019AF89 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458DB86126359EB700AE2AA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,11 +429,34 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		455BABCC268B101E0019AF89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 455BABC8268B101E0019AF89 /* SIS Watch Extension */;
+			targetProxy = 455BABCB268B101E0019AF89 /* PBXContainerItemProxy */;
+		};
+		455BABD8268B101F0019AF89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 455BABBD268B101B0019AF89 /* SIS Watch */;
+			targetProxy = 455BABD7268B101F0019AF89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		455BABC0268B101B0019AF89 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455BABC1268B101B0019AF89 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		458DB86E26359EB700AE2AA2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				458DB86F26359EB700AE2AA2 /* Base */,
+				455079B0267CA1E30041C7E5 /* ru */,
+				455079B2267CA2450041C7E5 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -299,10 +472,123 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		455BABDB268B101F0019AF89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87V3R938U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SIS Watch Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		455BABDC268B101F0019AF89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87V3R938U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SIS Watch Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		455BABDF268B101F0019AF89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87V3R938U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = SIS_Watch_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = SFEDU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		455BABE0268B101F0019AF89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87V3R938U4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = SIS_Watch_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = SFEDU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		458DB88D26359EBA00AE2AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -364,6 +650,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -468,6 +755,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		455BABDA268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455BABDB268B101F0019AF89 /* Debug */,
+				455BABDC268B101F0019AF89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		455BABDE268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455BABDF268B101F0019AF89 /* Debug */,
+				455BABE0268B101F0019AF89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		458DB86026359EB700AE2AA2 /* Build configuration list for PBXProject "SIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

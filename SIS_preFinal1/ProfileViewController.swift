@@ -9,24 +9,37 @@ import UIKit
 import Firebase
 
 let db = Firestore.firestore()
+// MARK: - Welcome3
+struct Welcome3 {
+    let student: Student
+}
 
-class ProfileViewController: UIViewController {
+// MARK: - Student
+struct Student {
+    let studID, email, firstName, secondName: String
+    let lastName, levelLearn, formLearn, speciality: String
+    let grade: Int
+    let stGroup: String
+    let isTeacher: Int
+}
+
+class ProfileViewController: UIViewController, UITableViewDelegate {
     
 
 
     
     @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var middleNameLabel: UILabel!
     @IBOutlet weak var groupLabel: UILabel!
     @IBOutlet weak var signOutButton: UIBarButtonItem!
-    
+    @IBOutlet weak var UserImage: UIImageView!
     var userID: String = ""
     var userName: String = ""
 
 
         
     override func viewDidLoad() {
+        authSfedu()
+        let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
         if (firstNameLabel.text == "Имя") {
             //signOutButton.title = "Войти"
 
@@ -38,6 +51,7 @@ class ProfileViewController: UIViewController {
 
         }
     getUID()
+    design()
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
@@ -65,8 +79,7 @@ class ProfileViewController: UIViewController {
                     } else {
                         for document in querySnapshot!.documents {
                             self.firstNameLabel.text = document.get("firstname") as? String
-                            self.lastNameLabel.text = document.get("lastname") as? String
-                            self.middleNameLabel.text = document.get("middlename") as? String
+                            self.firstNameLabel.text! += " " + (document.get("lastname") as? String)!
                             self.groupLabel.text = document.get("group") as? String
                             self.showLabel()
                             self.hideActivityIndicator()
@@ -86,15 +99,13 @@ func showModalAuth(){ //Показать окно авторизации/рег�
     
     func showLabel(){ //показываем данные
         self.firstNameLabel.alpha = 1
-        self.lastNameLabel.alpha = 1
-        self.middleNameLabel.alpha = 1
         self.groupLabel.alpha = 1
+        self.UserImage.alpha = 1
     }
     func deleteLabel(){ //скрываем данные
         firstNameLabel.alpha = 0
-        lastNameLabel.alpha = 0
-        middleNameLabel.alpha = 0
         groupLabel.alpha = 0
+        UserImage.alpha = 0
     }
     func checkAuth(){ //проверяем авторизирован бользователь или нет
         Auth.auth().addStateDidChangeListener { [self] (auth, user) in
@@ -157,4 +168,23 @@ func showModalAuth(){ //Показать окно авторизации/рег�
 
         //UIApplication.shared.endIgnoringInteractionEvents()
 }
+    func design(){
+        UserImage.frame.size = CGSize(width: 100, height: 100) //размеры новой картинки
+        UserImage.layer.cornerRadius = 45
+        UserImage.clipsToBounds = true
+        UserImage.layer.borderColor = UIColor.white.cgColor // цвет рамки
+        UserImage.layer.borderWidth = 1.5 // толщина рамки
+
+    }
+    func authSfedu(){
+
+        guard let url = URL(string: "projectoffice:q90h5ju@api.sync.ictis.sfedu.ru/find/student/email?email=azenkovskii@sfedu.ru") else {return}
+
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            print(String(data: data, encoding: .utf8)!)
+        }
+
+        task.resume()
+    }
 }

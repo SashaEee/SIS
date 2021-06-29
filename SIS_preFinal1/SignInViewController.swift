@@ -19,9 +19,12 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var groupTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
-    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        photoImageView.layer.cornerRadius = 50
+        photoImageView.layer.borderWidth = 0.5
         errorLabel.alpha = 0
         addTapGestureToHideKeyboard()
             }
@@ -50,6 +53,12 @@ class SignInViewController: UIViewController {
         return nil
     }
     
+    @IBAction func photoButtonPressed(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+    }
     @IBAction func signInPressed(_ sender: Any) {
         
         
@@ -91,3 +100,14 @@ class SignInViewController: UIViewController {
                 }
             }
         }
+// MARK: - UIImagePickerControllerDelegate
+extension SignInViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        photoImageView.image = image
+    }
+}
+
+

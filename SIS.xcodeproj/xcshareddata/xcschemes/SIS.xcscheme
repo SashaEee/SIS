@@ -20,6 +20,48 @@
                ReferencedContainer = "container:SIS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45A481FD2689E8FE00F94679"
+               BuildableName = "SIS Watch.app"
+               BlueprintName = "SIS Watch"
+               ReferencedContainer = "container:../SIS Watch/SIS Watch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45A482112689E90100F94679"
+               BuildableName = "SIS Watch WatchKit App.app"
+               BlueprintName = "SIS Watch WatchKit App"
+               ReferencedContainer = "container:../SIS Watch/SIS Watch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45A4821F2689E90300F94679"
+               BuildableName = "SIS Watch WatchKit Extension.appex"
+               BlueprintName = "SIS Watch WatchKit Extension"
+               ReferencedContainer = "container:../SIS Watch/SIS Watch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
