@@ -9,9 +9,7 @@ import UIKit
 import CoreImage
 import Firebase
 import ScreenGuard
-import FirebaseInstallations
-
-
+import CryptoSwift
 
 var second: Int = 0
 var isVertical : Bool = false
@@ -25,8 +23,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var Ractangle: UIImageView!
     @IBOutlet weak var reButton: UIBarButtonItem!
-    
     @IBOutlet weak var UserImage: UIImageView!
+    
     var textUser: String = "Пользователь не авторизован"
     var myTimer: Timer!
     @objc func refresh() {
@@ -43,6 +41,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     }
     
     override func viewDidLoad() {
+        UserImage.image = avatar
         design()
         designUserImage()
         //ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
@@ -120,8 +119,21 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     
     // MARK: - Получение данных из Firebase
 
-    func getFireBase(){ //Получаем данные с FireBase
+    func getFireBase(){
         showActivityIndicator()
+        if (firstName != nil){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4){
+            let salt = self.getTime()
+            self.textUser = "\(salt)" + " " + firstName! + " " + lastName! + " id: " + studID!
+            print(self.textUser)
+                self.encode()
+            self.textView.text = self.textUser
+            print (self.textUser)
+            self.refreshQRCode()
+            self.hideActivityIndicator()
+            }
+        }
+        else {//Получаем данные с FireBase
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email
@@ -137,20 +149,17 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
                         for document in querySnapshot!.documents {
                             self.textUser=""
                             let space = " "
-                            let firstname = document.get("firstname") as! String
-                            let lastname = document.get("lastname") as! String
-                            let middlename = document.get("middlename") as! String
-                            let group = document.get("group") as! String
-                            self.textUser = self.textUser + salt + space + lastname + space + firstname + space + middlename + space + group
+                            let id = document.get("studID") as! String
+                            self.textUser = salt + space + id
                             self.textView.text = self.textUser
                             print (self.textUser)
                             self.refreshQRCode()
                             self.hideActivityIndicator()
                         }
-                        
                     }
             }
         }
+    }
     }
     // MARK: - Кнопка обновления
 
@@ -173,12 +182,6 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     }
 // MARK: - Получаем соль
 
-    func randomSalt() -> String{
-        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        let salt = String((0..<15).map{ _ in letters.randomElement()! })
-        print("Salt: ",salt)
-        return salt
-    }
     func brightness(){
         UIScreen.main.brightness = CGFloat(1.0)
     }
@@ -219,7 +222,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     // MARK: - Получение даты и времени
 
     func getTime() -> String {
-        let dateTime = DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium)
+//        let dateTime = DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .medium)
+        let dateTime = "\(Int(Date().timeIntervalSince1970))"
         return dateTime
     }
     func design(){
@@ -235,6 +239,15 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         UserImage.layer.borderColor = UIColor.white.cgColor // цвет рамки
         UserImage.layer.borderWidth = 1.5 // толщина рамки
     }
+    func encode(){
+        do {
+            let aes = try AES(key: "passwordpassword", iv: "drowssapdrowssap")
+            let ciphertext = try aes.encrypt(Array(self.textUser.utf8))
+            print(ciphertext)
+        } catch { }
+        
+    }
+
 }
 // MARK: - Защита от скриншотов
 

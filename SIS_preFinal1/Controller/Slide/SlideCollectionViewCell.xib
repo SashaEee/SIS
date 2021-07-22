@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SlideCollectionViewCell" customModule="SIS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="311" height="608"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="311" height="608"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCd-5b-G65">
+                        <rect key="frame" x="0.0" y="0.0" width="311" height="608"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5A3-Po-1ar">
+                                <rect key="frame" x="0.0" y="0.0" width="311" height="608"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="puE-K2-h2s">
+                                    <rect key="frame" x="0.0" y="0.0" width="311" height="608"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FsU-A1-pPE">
+                                <rect key="frame" x="0.0" y="0.0" width="311" height="608"/>
+                                <imageReference key="image" image="slide1"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFEDU Auth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuQ-WN-DLe">
+                                <rect key="frame" x="15" y="100" width="175.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH2-aF-tlk">
+                                <rect key="frame" x="15" y="166" width="166.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWW-u5-029">
+                                <rect key="frame" x="30" y="455" width="251" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="wps-SL-a3C"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="21">
+                                        <color key="backgroundColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Регистрация">
+                                            <attributes>
+                                                <font key="NSFont" size="13" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="regButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="rei-ly-JJO"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pU-HS-psV">
+                                <rect key="frame" x="124.5" y="517" width="62" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="2hg-9V-N3R"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Войти">
+                                            <attributes>
+                                                <font key="NSFont" size="13" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="authButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="DCe-tv-nLd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5A3-Po-1ar" firstAttribute="leading" secondItem="yCd-5b-G65" secondAttribute="leading" id="4jg-th-0wx"/>
+                            <constraint firstItem="FsU-A1-pPE" firstAttribute="leading" secondItem="yCd-5b-G65" secondAttribute="leading" id="DZr-CV-TCK"/>
+                            <constraint firstAttribute="trailing" secondItem="5A3-Po-1ar" secondAttribute="trailing" id="Hgm-kw-bkn"/>
+                            <constraint firstItem="qH2-aF-tlk" firstAttribute="top" secondItem="SuQ-WN-DLe" secondAttribute="bottom" constant="30" id="HiB-BE-QoE"/>
+                            <constraint firstItem="5pU-HS-psV" firstAttribute="centerX" secondItem="yCd-5b-G65" secondAttribute="centerX" id="JOg-lm-2bV"/>
+                            <constraint firstAttribute="bottom" secondItem="5pU-HS-psV" secondAttribute="bottom" constant="49" id="PX1-rp-WXA"/>
+                            <constraint firstItem="qH2-aF-tlk" firstAttribute="leading" secondItem="yCd-5b-G65" secondAttribute="leading" constant="15" id="QQE-wT-IaC"/>
+                            <constraint firstItem="SuQ-WN-DLe" firstAttribute="top" secondItem="yCd-5b-G65" secondAttribute="top" constant="100" id="RiP-g6-QyM"/>
+                            <constraint firstAttribute="trailing" secondItem="sWW-u5-029" secondAttribute="trailing" constant="30" id="b4C-GV-LZe"/>
+                            <constraint firstItem="SuQ-WN-DLe" firstAttribute="leading" secondItem="yCd-5b-G65" secondAttribute="leading" constant="15" id="bEx-2H-kg4"/>
+                            <constraint firstAttribute="bottom" secondItem="5A3-Po-1ar" secondAttribute="bottom" id="csy-D7-sYL"/>
+                            <constraint firstAttribute="bottom" secondItem="FsU-A1-pPE" secondAttribute="bottom" id="fu2-FJ-sCh"/>
+                            <constraint firstAttribute="trailing" secondItem="FsU-A1-pPE" secondAttribute="trailing" id="nHT-nI-NS4"/>
+                            <constraint firstItem="FsU-A1-pPE" firstAttribute="top" secondItem="yCd-5b-G65" secondAttribute="top" id="uLK-5j-UW9"/>
+                            <constraint firstItem="sWW-u5-029" firstAttribute="leading" secondItem="yCd-5b-G65" secondAttribute="leading" constant="30" id="vJN-HE-HRB"/>
+                            <constraint firstItem="5pU-HS-psV" firstAttribute="top" secondItem="sWW-u5-029" secondAttribute="bottom" constant="20" id="vl8-cQ-Nqg"/>
+                            <constraint firstItem="5A3-Po-1ar" firstAttribute="top" secondItem="yCd-5b-G65" secondAttribute="top" id="wm2-e6-3Ha"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="yCd-5b-G65" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LEB-Ry-cLH"/>
+                <constraint firstItem="yCd-5b-G65" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ymg-gs-tWK"/>
+                <constraint firstAttribute="bottom" secondItem="yCd-5b-G65" secondAttribute="bottom" id="ZEZ-ah-Jrs"/>
+                <constraint firstAttribute="trailing" secondItem="yCd-5b-G65" secondAttribute="trailing" id="nbz-1y-gFm"/>
+            </constraints>
+            <size key="customSize" width="311" height="608"/>
+            <connections>
+                <outlet property="authButton" destination="5pU-HS-psV" id="Yvc-Ew-Ihf"/>
+                <outlet property="descriptionText" destination="qH2-aF-tlk" id="PmH-pi-5in"/>
+                <outlet property="regButton" destination="sWW-u5-029" id="rUj-4g-RQ2"/>
+                <outlet property="slideImage" destination="FsU-A1-pPE" id="aiL-Yh-eQr"/>
+            </connections>
+            <point key="canvasLocation" x="1063.0434782608697" y="204.91071428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="slide1" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,22 +9,20 @@
 /* Begin PBXBuildFile section */
 		4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C3252649485B00BBAB64 /* ProfileViewController.swift */; };
 		4507C328264A7AF500BBAB64 /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C327264A7AF500BBAB64 /* CallendarViewController.swift */; };
-		455BABC2268B101B0019AF89 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455BABC0268B101B0019AF89 /* Interface.storyboard */; };
-		455BABC4268B101D0019AF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455BABC3268B101D0019AF89 /* Assets.xcassets */; };
-		455BABCA268B101E0019AF89 /* SIS Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		455BABD5268B101F0019AF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455BABD4268B101F0019AF89 /* Assets.xcassets */; };
-		455BABD9268B101F0019AF89 /* SIS Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 455BABBE268B101B0019AF89 /* SIS Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		455BAC0D268B10860019AF89 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BABFD268B106F0019AF89 /* ComplicationController.swift */; };
-		455BAC0E268B10860019AF89 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BABFB268B106F0019AF89 /* ExtensionDelegate.swift */; };
-		455BAC0F268B10860019AF89 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455BABF9268B106F0019AF89 /* InterfaceController.swift */; };
-		455BAC11268B11500019AF89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455BAC10268B11500019AF89 /* GoogleService-Info.plist */; };
-		455BAC12268B11500019AF89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455BAC10268B11500019AF89 /* GoogleService-Info.plist */; };
+		451605D426A08A9D0011D345 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451605D326A08A9D0011D345 /* Model.swift */; };
+		451605D626A0CF2F0011D345 /* SliderSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451605D526A0CF2F0011D345 /* SliderSliders.swift */; };
+		451605D826A0D2070011D345 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451605D726A0D2070011D345 /* RegisterViewController.swift */; };
+		451605DA26A0D22E0011D345 /* AuthInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451605D926A0D22E0011D345 /* AuthInViewController.swift */; };
+		4519946F26A8732000049738 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4519946E26A8732000049738 /* Validators.swift */; };
+		4519947126A873AE00049738 /* AuthResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4519947026A873AD00049738 /* AuthResult.swift */; };
+		4519947326A8769000049738 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4519947226A8769000049738 /* UIViewController + Extension.swift */; };
+		4519947526A8770C00049738 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4519947426A8770C00049738 /* AuthError.swift */; };
+		4521171C26A07AFC004DE6D4 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521171B26A07AFC004DE6D4 /* RegViewController.swift */; };
+		4521172026A07F47004DE6D4 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521171E26A07F47004DE6D4 /* SlideCollectionViewCell.swift */; };
+		4521172126A07F47004DE6D4 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */; };
+		45585ACE268B222400726B93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45585ACD268B222400726B93 /* GoogleService-Info.plist */; };
 		457CF9B22647E092002AF540 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		457CF9B52647E3D7002AF540 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */; };
 		457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B626485BC7002AF540 /* AuthViewController.swift */; };
-		457CF9B926485BE9002AF540 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B826485BE9002AF540 /* SignInViewController.swift */; };
-		457CF9BB26485BF8002AF540 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9BA26485BF8002AF540 /* LoginViewController.swift */; };
-		457CF9BD26485C0B002AF540 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9BC26485C0B002AF540 /* PageViewController.swift */; };
 		458DB86926359EB700AE2AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86826359EB700AE2AA2 /* AppDelegate.swift */; };
 		458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */; };
 		458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86C26359EB700AE2AA2 /* ViewController.swift */; };
@@ -32,38 +30,12 @@
 		458DB87226359EBA00AE2AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458DB87126359EBA00AE2AA2 /* Assets.xcassets */; };
 		458DB87526359EBA00AE2AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458DB87326359EBA00AE2AA2 /* LaunchScreen.storyboard */; };
 		458DB89926359F8000AE2AA2 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */; };
-		6F6851F64E07B14E52588FCF /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149DD9C8C170E8808FD59248 /* Pods_SIS.framework */; };
+		45CCE40B26AA075A003CA745 /* CenturyGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45CCE40A26AA075A003CA745 /* CenturyGothic.ttf */; };
+		45CCE40D26AA07EB003CA745 /* CenturyGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45CCE40C26AA07EB003CA745 /* CenturyGothic-Bold.ttf */; };
+		D3BE71D446838E6E061FB30F /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E3DF0D3EBE1285339999D3 /* Pods_SIS.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		455BABCB268B101E0019AF89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 458DB85D26359EB700AE2AA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 455BABC8268B101E0019AF89;
-			remoteInfo = "SIS Watch Extension";
-		};
-		455BABD7268B101F0019AF89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 458DB85D26359EB700AE2AA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 455BABBD268B101B0019AF89;
-			remoteInfo = "SIS Watch";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		455BABDD268B101F0019AF89 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				455BABCA268B101E0019AF89 /* SIS Watch Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		457CF9B32647E092002AF540 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,7 +53,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				455BABD9268B101F0019AF89 /* SIS Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,26 +60,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		149DD9C8C170E8808FD59248 /* Pods_SIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E3DF0D3EBE1285339999D3 /* Pods_SIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1067DC6C6D97E7921FFF4CE5 /* Pods-SIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.release.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.release.xcconfig"; sourceTree = "<group>"; };
+		1F4D16EAE2A8A98E497AEE09 /* Pods_SIS_Watch_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIS_Watch_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4507C3252649485B00BBAB64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4507C327264A7AF500BBAB64 /* CallendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
+		451605D326A08A9D0011D345 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		451605D526A0CF2F0011D345 /* SliderSliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSliders.swift; sourceTree = "<group>"; };
+		451605D726A0D2070011D345 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		451605D926A0D22E0011D345 /* AuthInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInViewController.swift; sourceTree = "<group>"; };
+		4519946E26A8732000049738 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		4519947026A873AD00049738 /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
+		4519947226A8769000049738 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		4519947426A8770C00049738 /* AuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthError.swift; path = "../../../../Downloads/108. iOS 13 Xcode 11 Firebase storage/Конечный проект/FirebaseWebinar/Helpers/AuthError.swift"; sourceTree = "<group>"; };
+		4521171B26A07AFC004DE6D4 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		4521171E26A07F47004DE6D4 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
+		4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		455079B0267CA1E30041C7E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		455079B2267CA2450041C7E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		455BABBE268B101B0019AF89 /* SIS Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SIS Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		455BABC1268B101B0019AF89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		455BABC3268B101D0019AF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SIS Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		455BABD4268B101F0019AF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		455BABD6268B101F0019AF89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		455BABF9268B106F0019AF89 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "../SIS Watch1 WatchKit Extension/InterfaceController.swift"; sourceTree = "<group>"; };
-		455BABFB268B106F0019AF89 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../SIS Watch1 WatchKit Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
-		455BABFD268B106F0019AF89 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComplicationController.swift; path = "../SIS Watch1 WatchKit Extension/ComplicationController.swift"; sourceTree = "<group>"; };
-		455BAC10268B11500019AF89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "SIS_preFinal1/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45585ACD268B222400726B93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		457CF9B626485BC7002AF540 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		457CF9B826485BE9002AF540 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		457CF9BA26485BF8002AF540 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		457CF9BC26485C0B002AF540 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		458DB86526359EB700AE2AA2 /* SIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458DB86826359EB700AE2AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,68 +89,74 @@
 		458DB87426359EBA00AE2AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458DB87626359EBA00AE2AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
-		D3499437A69DB94DF867C476 /* Pods-SIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.debug.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.debug.xcconfig"; sourceTree = "<group>"; };
-		E70580ED7958AE4BD728B187 /* Pods-SIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.release.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.release.xcconfig"; sourceTree = "<group>"; };
+		45CCE40A26AA075A003CA745 /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CenturyGothic.ttf; sourceTree = "<group>"; };
+		45CCE40C26AA07EB003CA745 /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
+		79AD41EDA5ED4329DCE1EEBE /* Pods-SIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.debug.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		455BABC6268B101E0019AF89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		458DB86226359EB700AE2AA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F6851F64E07B14E52588FCF /* Pods_SIS.framework in Frameworks */,
+				D3BE71D446838E6E061FB30F /* Pods_SIS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080C6F9C3EB4BAD048EA6A1E /* Frameworks */ = {
+		01DAB952585E3E2C753A0FF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				149DD9C8C170E8808FD59248 /* Pods_SIS.framework */,
+				01E3DF0D3EBE1285339999D3 /* Pods_SIS.framework */,
+				1F4D16EAE2A8A98E497AEE09 /* Pods_SIS_Watch_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		455BABBF268B101B0019AF89 /* SIS Watch */ = {
+		4521171926A07A70004DE6D4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				455BABC0268B101B0019AF89 /* Interface.storyboard */,
-				455BABC3268B101D0019AF89 /* Assets.xcassets */,
+				4521171B26A07AFC004DE6D4 /* RegViewController.swift */,
+				451605D726A0D2070011D345 /* RegisterViewController.swift */,
+				4519947226A8769000049738 /* UIViewController + Extension.swift */,
+				4519946E26A8732000049738 /* Validators.swift */,
+				4519947026A873AD00049738 /* AuthResult.swift */,
+				4519947426A8770C00049738 /* AuthError.swift */,
+				451605D926A0D22E0011D345 /* AuthInViewController.swift */,
 			);
-			path = "SIS Watch";
+			name = Login;
+			path = "../New Group2/Login";
 			sourceTree = "<group>";
 		};
-		455BABCD268B101E0019AF89 /* SIS Watch Extension */ = {
+		4521171A26A07AC8004DE6D4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				455BABF9268B106F0019AF89 /* InterfaceController.swift */,
-				455BABFB268B106F0019AF89 /* ExtensionDelegate.swift */,
-				455BABFD268B106F0019AF89 /* ComplicationController.swift */,
-				455BABD4268B101F0019AF89 /* Assets.xcassets */,
-				455BABD6268B101F0019AF89 /* Info.plist */,
-				455BAC10268B11500019AF89 /* GoogleService-Info.plist */,
+				4521171D26A07F10004DE6D4 /* Slide */,
+				4521171926A07A70004DE6D4 /* Login */,
+				451605D326A08A9D0011D345 /* Model.swift */,
 			);
-			path = "SIS Watch Extension";
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4521171D26A07F10004DE6D4 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				4521171E26A07F47004DE6D4 /* SlideCollectionViewCell.swift */,
+				4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */,
+				451605D526A0CF2F0011D345 /* SliderSliders.swift */,
+			);
+			path = Slide;
 			sourceTree = "<group>";
 		};
 		458DB85C26359EB700AE2AA2 = {
 			isa = PBXGroup;
 			children = (
-				455BABBF268B101B0019AF89 /* SIS Watch */,
-				455BABCD268B101E0019AF89 /* SIS Watch Extension */,
 				458DB86626359EB700AE2AA2 /* Products */,
 				458DB86726359EB700AE2AA2 /* SIS_preFinal1 */,
 				88A67E60630B4F346F423D3D /* Pods */,
-				080C6F9C3EB4BAD048EA6A1E /* Frameworks */,
+				01DAB952585E3E2C753A0FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				458DB86526359EB700AE2AA2 /* SIS.app */,
-				455BABBE268B101B0019AF89 /* SIS Watch.app */,
-				455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,22 +179,30 @@
 				4507C327264A7AF500BBAB64 /* CallendarViewController.swift */,
 				457CF9B626485BC7002AF540 /* AuthViewController.swift */,
 				4507C3252649485B00BBAB64 /* ProfileViewController.swift */,
-				457CF9B826485BE9002AF540 /* SignInViewController.swift */,
-				457CF9BA26485BF8002AF540 /* LoginViewController.swift */,
-				457CF9BC26485C0B002AF540 /* PageViewController.swift */,
+				4521171A26A07AC8004DE6D4 /* Controller */,
 				458DB87126359EBA00AE2AA2 /* Assets.xcassets */,
 				458DB87326359EBA00AE2AA2 /* LaunchScreen.storyboard */,
 				458DB87626359EBA00AE2AA2 /* Info.plist */,
-				457CF9B42647E3D7002AF540 /* GoogleService-Info.plist */,
+				45CCE40926AA06EC003CA745 /* fonts */,
+				45585ACD268B222400726B93 /* GoogleService-Info.plist */,
 			);
 			path = SIS_preFinal1;
+			sourceTree = "<group>";
+		};
+		45CCE40926AA06EC003CA745 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				45CCE40C26AA07EB003CA745 /* CenturyGothic-Bold.ttf */,
+				45CCE40A26AA075A003CA745 /* CenturyGothic.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		88A67E60630B4F346F423D3D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D3499437A69DB94DF867C476 /* Pods-SIS.debug.xcconfig */,
-				E70580ED7958AE4BD728B187 /* Pods-SIS.release.xcconfig */,
+				79AD41EDA5ED4329DCE1EEBE /* Pods-SIS.debug.xcconfig */,
+				1067DC6C6D97E7921FFF4CE5 /* Pods-SIS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -227,56 +210,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		455BABBD268B101B0019AF89 /* SIS Watch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 455BABDE268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch" */;
-			buildPhases = (
-				455BABBC268B101B0019AF89 /* Resources */,
-				455BABDD268B101F0019AF89 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				455BABCC268B101E0019AF89 /* PBXTargetDependency */,
-			);
-			name = "SIS Watch";
-			productName = "SIS Watch";
-			productReference = 455BABBE268B101B0019AF89 /* SIS Watch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		455BABC8268B101E0019AF89 /* SIS Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 455BABDA268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch Extension" */;
-			buildPhases = (
-				455BABC5268B101E0019AF89 /* Sources */,
-				455BABC6268B101E0019AF89 /* Frameworks */,
-				455BABC7268B101E0019AF89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SIS Watch Extension";
-			productName = "SIS Watch Extension";
-			productReference = 455BABC9268B101E0019AF89 /* SIS Watch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		458DB86426359EB700AE2AA2 /* SIS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 458DB88F26359EBA00AE2AA2 /* Build configuration list for PBXNativeTarget "SIS" */;
 			buildPhases = (
-				1D89D8A18BA7B93379604D19 /* [CP] Check Pods Manifest.lock */,
+				66A6084EE789CD653C9D2C92 /* [CP] Check Pods Manifest.lock */,
 				458DB86126359EB700AE2AA2 /* Sources */,
 				458DB86226359EB700AE2AA2 /* Frameworks */,
 				458DB86326359EB700AE2AA2 /* Resources */,
 				457CF9B32647E092002AF540 /* Embed Frameworks */,
-				DB51E99870A1C47D9A8B5A2E /* [CP] Embed Pods Frameworks */,
 				45BC59912680AF5E00C699EE /* Embed Watch Content */,
+				FB0779B3B8733ED5DAE6B791 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				455BABD8268B101F0019AF89 /* PBXTargetDependency */,
 			);
 			name = SIS;
 			productName = SIS_preFinal1;
@@ -292,12 +240,6 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					455BABBD268B101B0019AF89 = {
-						CreatedOnToolsVersion = 13.0;
-					};
-					455BABC8268B101E0019AF89 = {
-						CreatedOnToolsVersion = 13.0;
-					};
 					458DB86426359EB700AE2AA2 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -318,47 +260,29 @@
 			projectRoot = "";
 			targets = (
 				458DB86426359EB700AE2AA2 /* SIS */,
-				455BABBD268B101B0019AF89 /* SIS Watch */,
-				455BABC8268B101E0019AF89 /* SIS Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		455BABBC268B101B0019AF89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				455BABC4268B101D0019AF89 /* Assets.xcassets in Resources */,
-				455BABC2268B101B0019AF89 /* Interface.storyboard in Resources */,
-				455BAC11268B11500019AF89 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		455BABC7268B101E0019AF89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				455BABD5268B101F0019AF89 /* Assets.xcassets in Resources */,
-				455BAC12268B11500019AF89 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		458DB86326359EB700AE2AA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				458DB87526359EBA00AE2AA2 /* LaunchScreen.storyboard in Resources */,
-				457CF9B52647E3D7002AF540 /* GoogleService-Info.plist in Resources */,
+				45CCE40B26AA075A003CA745 /* CenturyGothic.ttf in Resources */,
+				4521172126A07F47004DE6D4 /* SlideCollectionViewCell.xib in Resources */,
+				45585ACE268B222400726B93 /* GoogleService-Info.plist in Resources */,
 				458DB87226359EBA00AE2AA2 /* Assets.xcassets in Resources */,
 				458DB87026359EB700AE2AA2 /* Main.storyboard in Resources */,
+				45CCE40D26AA07EB003CA745 /* CenturyGothic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D89D8A18BA7B93379604D19 /* [CP] Check Pods Manifest.lock */ = {
+		66A6084EE789CD653C9D2C92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,7 +304,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB51E99870A1C47D9A8B5A2E /* [CP] Embed Pods Frameworks */ = {
+		FB0779B3B8733ED5DAE6B791 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,57 +324,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		455BABC5268B101E0019AF89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				455BAC0E268B10860019AF89 /* ExtensionDelegate.swift in Sources */,
-				455BAC0D268B10860019AF89 /* ComplicationController.swift in Sources */,
-				455BAC0F268B10860019AF89 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		458DB86126359EB700AE2AA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457CF9BB26485BF8002AF540 /* LoginViewController.swift in Sources */,
 				4507C328264A7AF500BBAB64 /* CallendarViewController.swift in Sources */,
+				4519947126A873AE00049738 /* AuthResult.swift in Sources */,
 				458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */,
 				458DB86926359EB700AE2AA2 /* AppDelegate.swift in Sources */,
-				457CF9B926485BE9002AF540 /* SignInViewController.swift in Sources */,
+				4521172026A07F47004DE6D4 /* SlideCollectionViewCell.swift in Sources */,
+				451605D626A0CF2F0011D345 /* SliderSliders.swift in Sources */,
+				451605D826A0D2070011D345 /* RegisterViewController.swift in Sources */,
+				451605D426A08A9D0011D345 /* Model.swift in Sources */,
+				4519946F26A8732000049738 /* Validators.swift in Sources */,
 				457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */,
 				458DB89926359F8000AE2AA2 /* GeneratorViewController.swift in Sources */,
 				4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */,
+				4519947526A8770C00049738 /* AuthError.swift in Sources */,
 				458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */,
-				457CF9BD26485C0B002AF540 /* PageViewController.swift in Sources */,
+				4519947326A8769000049738 /* UIViewController + Extension.swift in Sources */,
+				451605DA26A0D22E0011D345 /* AuthInViewController.swift in Sources */,
+				4521171C26A07AFC004DE6D4 /* RegViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		455BABCC268B101E0019AF89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 455BABC8268B101E0019AF89 /* SIS Watch Extension */;
-			targetProxy = 455BABCB268B101E0019AF89 /* PBXContainerItemProxy */;
-		};
-		455BABD8268B101F0019AF89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 455BABBD268B101B0019AF89 /* SIS Watch */;
-			targetProxy = 455BABD7268B101F0019AF89 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		455BABC0268B101B0019AF89 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				455BABC1268B101B0019AF89 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		458DB86E26359EB700AE2AA2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -472,118 +372,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		455BABDB268B101F0019AF89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 87V3R938U4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SIS Watch Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		455BABDC268B101F0019AF89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 87V3R938U4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SIS Watch Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
-		455BABDF268B101F0019AF89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 87V3R938U4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = SIS_Watch_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = SFEDU;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		455BABE0268B101F0019AF89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 87V3R938U4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = SIS_Watch_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "SIS Watch";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = SFEDU;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
 		458DB88D26359EBA00AE2AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -704,7 +492,7 @@
 		};
 		458DB89026359EBA00AE2AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3499437A69DB94DF867C476 /* Pods-SIS.debug.xcconfig */;
+			baseConfigurationReference = 79AD41EDA5ED4329DCE1EEBE /* Pods-SIS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -729,7 +517,7 @@
 		};
 		458DB89126359EBA00AE2AA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70580ED7958AE4BD728B187 /* Pods-SIS.release.xcconfig */;
+			baseConfigurationReference = 1067DC6C6D97E7921FFF4CE5 /* Pods-SIS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -755,24 +543,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		455BABDA268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				455BABDB268B101F0019AF89 /* Debug */,
-				455BABDC268B101F0019AF89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		455BABDE268B101F0019AF89 /* Build configuration list for PBXNativeTarget "SIS Watch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				455BABDF268B101F0019AF89 /* Debug */,
-				455BABE0268B101F0019AF89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		458DB86026359EB700AE2AA2 /* Build configuration list for PBXProject "SIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

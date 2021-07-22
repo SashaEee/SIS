@@ -7,21 +7,23 @@
 
 import UIKit
 import Firebase
-
+import Alamofire
+import SwiftyJSON
 let db = Firestore.firestore()
-// MARK: - Welcome3
-struct Welcome3 {
+// MARK: - Welcome6
+struct UserData: Decodable{
     let student: Student
 }
 
 // MARK: - Student
-struct Student {
-    let studID, email, firstName, secondName: String
-    let lastName, levelLearn, formLearn, speciality: String
+struct Student: Decodable {
+    let formLearn, studID, speciality, levelLearn: String
+    let secondName, stGroup, lastName: String
     let grade: Int
-    let stGroup: String
+    let firstName, email: String
     let isTeacher: Int
 }
+
 
 class ProfileViewController: UIViewController, UITableViewDelegate {
     
@@ -38,7 +40,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
 
         
     override func viewDidLoad() {
-        authSfedu()
+        UserImage.image = avatar
         let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
         if (firstNameLabel.text == "Имя") {
             //signOutButton.title = "Войти"
@@ -68,32 +70,52 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
 
     func getFireBase(){ //Получаем данные с FireBase
         showActivityIndicator()
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let email = user.email
-            print(user)
-        db.collection("users").whereField("email", isEqualTo: email!)
-                .getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            self.firstNameLabel.text = document.get("firstname") as? String
-                            self.firstNameLabel.text! += " " + (document.get("lastname") as? String)!
-                            self.groupLabel.text = document.get("group") as? String
-                            self.showLabel()
-                            self.hideActivityIndicator()
+        if (firstName != nil){
+            firstNameLabel.text = firstName! + " " + lastName!
+            if (isTeacher! != 1){
+            var group1 = levelLearn![(levelLearn?.startIndex)!]
+            if (group1 == "Б"){ group1 = "б"}
+            if (group1 == "М"){ group1 = "м"}
+            if (group1 == "А"){ group1 = "а"}
+            if (group1 == "С"){ group1 = "с"}
+            //let group2 = formLearn!
+            groupLabel.text = "КТ" + "\(group1)" + "о" + grade! + " - " + stGroup!
+                showLabel()
+                hideActivityIndicator()
+        } else {
+            groupLabel.text = "Преподаватель"
+            showLabel()
+            hideActivityIndicator()
+        }
+        }
+        else {
+            let user = Auth.auth().currentUser
+            if let user = user {
+                let email = user.email
+                print(user)
+            db.collection("users").whereField("email", isEqualTo: email!)
+                    .getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                self.firstNameLabel.text = document.get("firstname") as? String
+                                self.firstNameLabel.text! += " " + (document.get("lastname") as? String)!
+                                self.groupLabel.text = document.get("group") as? String
+                                self.showLabel()
+                                self.hideActivityIndicator()
 
+                            }
+                            
                         }
-                        
-                    }
+                }
             }
         }
     }
     
 func showModalAuth(){ //Показать окно авторизации/регистрации
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-        let newvc = storyBoard.instantiateViewController(withIdentifier: "NavAuth")
+        let newvc = storyBoard.instantiateViewController(withIdentifier: "AuthInViewController")
         self.present(newvc, animated:true, completion:nil)
 }
     
@@ -116,6 +138,7 @@ func showModalAuth(){ //Показать окно авторизации/рег�
                     
                 } else {
                     print("User is auth")
+                    print (firstName)
                     getFireBase()
                     //signOutButton.title = "Выйти"
                 }
@@ -131,9 +154,10 @@ func showModalAuth(){ //Показать окно авторизации/рег�
        }
          
     }
-    func getUID(){ //получаем UID устройства
+    func getUID() { //получаем UID устройства
         if let identifierForVendor = UIDevice.current.identifierForVendor {
             print("UID вашего устройства: ",identifierForVendor.uuidString)
+            UID = identifierForVendor.uuidString
         }
     }
     func showActivityIndicator() {
@@ -175,16 +199,5 @@ func showModalAuth(){ //Показать окно авторизации/рег�
         UserImage.layer.borderColor = UIColor.white.cgColor // цвет рамки
         UserImage.layer.borderWidth = 1.5 // толщина рамки
 
-    }
-    func authSfedu(){
-
-        guard let url = URL(string: "projectoffice:q90h5ju@api.sync.ictis.sfedu.ru/find/student/email?email=azenkovskii@sfedu.ru") else {return}
-
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            print(String(data: data, encoding: .utf8)!)
-        }
-
-        task.resume()
     }
 }

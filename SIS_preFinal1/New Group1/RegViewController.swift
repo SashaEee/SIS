@@ -1,13 +1,13 @@
 //
-//  PageViewController.swift
+//  RegViewController.swift
 //  SIS
 //
-//  Created by Sasha on 5/9/21.
+//  Created by Sasha on 7/15/21.
 //
 
 import UIKit
 
-class PageViewController: UIViewController {
+class RegViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
