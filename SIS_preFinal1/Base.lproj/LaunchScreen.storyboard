@@ -23,26 +23,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STUDENT IDENTIFY SYSTEM" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne2-ZN-KjT">
-                                <rect key="frame" x="222" y="400" width="123" height="96"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QH-XD-lJT">
+                                <rect key="frame" x="87" y="378" width="140" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="Hd7-cT-oxm"/>
+                                    <constraint firstAttribute="height" constant="140" id="CHU-lW-XyF"/>
+                                    <constraint firstAttribute="width" constant="140" id="aWS-5s-Cyi"/>
+                                </constraints>
+                                <imageReference key="image" image="Image"/>
+                                <imageReference key="highlightedImage" image="Image"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STUDENT IDENTIFY SYSTEM" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne2-ZN-KjT">
+                                <rect key="frame" x="246" y="400" width="148" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="VXG-L8-mqb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-7x-ZDf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <imageReference key="image" image="Монтажная область 8-10002"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ne2-ZN-KjT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dYx-7p-il4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ne2-ZN-KjT" secondAttribute="trailing" constant="69" id="oau-a1-KoS"/>
+                            <constraint firstItem="3QH-XD-lJT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-50" id="Ena-73-2eS"/>
+                            <constraint firstItem="Ne2-ZN-KjT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WHh-l3-T1b"/>
+                            <constraint firstItem="3QH-XD-lJT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hfN-nV-RCc"/>
+                            <constraint firstItem="Ne2-ZN-KjT" firstAttribute="leading" secondItem="3QH-XD-lJT" secondAttribute="trailing" constant="19" id="voP-fh-1z7"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -52,7 +59,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Монтажная область 8-10002" width="563" height="1218"/>
+        <image name="Image" width="161.5" height="161.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

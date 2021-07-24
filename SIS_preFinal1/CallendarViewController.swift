@@ -29,14 +29,14 @@ struct Table: Decodable{
 }
 class CallendarViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var raspTextView: UITextView!
     
-                override func viewDidLoad() {
+        override func viewDidLoad() {
+        passcode()
         super.viewDidLoad()
         let url = URL(string: "https://ictis.alex-b.me")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+
     }
 
     func shortNameFromName (_ fullName: String) -> String
@@ -44,6 +44,9 @@ class CallendarViewController: UIViewController {
         let lowerCasedName = fullName.lowercased()
         let shortName = lowerCasedName.components(separatedBy: " ")
         return shortName.first! //Make sure shortName is not empty before force unwrapping it
+    }
+    func passcode(){
+        Utilities.openSecurityPinPage()
     }
 
 }

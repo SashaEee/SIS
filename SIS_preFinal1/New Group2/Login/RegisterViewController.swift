@@ -26,6 +26,8 @@ class RegisterViewController: UIViewController{
         addTapGestureToHideKeyboard()
         photoImageView.layer.cornerRadius = 40
         photoImageView.layer.borderWidth = 0.5
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     func addTapGestureToHideKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
@@ -96,6 +98,18 @@ class RegisterViewController: UIViewController{
                 catch {
                     print("1")
                 }
+                if (firstName != nil){
+
+                    self.register(email: self.emailTextField.text, password: self.passwordTextField.text) { (result) in
+                    switch result {
+                        case .success:
+                            self.errorLabel.text = "Вы успешно зарегистрированы"
+                
+                        case .failure(let error):
+                            self.showAlert(with: "Ошибка", and: error.localizedDescription)
+                        }
+                    }
+                } else {self.showAlert(with: "Ошибка", and: "Студент с данной почтой не найден")}
             }
         
 
@@ -119,7 +133,7 @@ class RegisterViewController: UIViewController{
             return
         }
         
-        if (firstName != nil){
+
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             guard let result = result else {
                 completion(.failure(error!))
@@ -143,7 +157,7 @@ class RegisterViewController: UIViewController{
                             completion(.failure(error))
                         }
                         completion(.success)
-                        
+
                     }
                 case .failure(let error):
                     completion(.failure(error))
@@ -152,21 +166,11 @@ class RegisterViewController: UIViewController{
 
             
         }
-        } else {self.showAlert(with: "Ошибка", and: "Неправильно введена почта sfedu")}
     }
     
     @IBAction func signInPressed(_ sender: Any) {
         authSfedu(emailUser: emailTextField.text!)
         ProfileViewController().getUID()
-        register(email: emailTextField.text, password: passwordTextField.text) { (result) in
-            switch result {
-            case .success:
-                self.errorLabel.text = "Вы успешно зарегистрированы"
-        
-            case .failure(let error):
-                self.showAlert(with: "Ошибка", and: error.localizedDescription)
-            }
-        }
     }
     
     @IBAction func photoButtonPressed(_ sender: Any) {
@@ -185,5 +189,24 @@ extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerC
         photoImageView.image = image
     }
 }
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
+        if (emailTextField.text?.isEmpty ?? true) {
+            passwordTextField.isEnabled = false
+            textField.resignFirstResponder()
+        }
+        else if textField == emailTextField {
+            passwordTextField.isEnabled = true
+            passwordTextField.becomeFirstResponder()
+        }
+        else {
+            textField.resignFirstResponder()
+            signInPressed((Any).self)
+
+        }
+
+        return true
+    }
+}
 

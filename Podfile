@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+	# Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 inhibit_all_warnings!
@@ -20,6 +20,7 @@ pod 'ScreenGuard', '~> 0.0.1'
 pod 'Alamofire', '~> 5.4'
 pod 'SwiftyJSON'
 pod 'CryptoSwift'
+pod 'IRPasscode-swift'
 
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods

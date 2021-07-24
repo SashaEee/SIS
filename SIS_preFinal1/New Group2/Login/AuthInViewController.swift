@@ -26,6 +26,8 @@ class AuthInViewController: UIViewController {
             super.viewDidLoad()
 //            errorLabel.alpha = 0
             addTapGestureToHideKeyboard()
+            emailTextField.delegate = self
+            passwordTextField.delegate = self
                 }
 
                 func addTapGestureToHideKeyboard() {
@@ -48,7 +50,6 @@ class AuthInViewController: UIViewController {
             let error = checkValid()
             
             if error != nil {
-                errorLabel.alpha = 1
                 self.errorLabel.textColor = UIColor.red
                 errorLabel.text = error
             } else {
@@ -58,12 +59,10 @@ class AuthInViewController: UIViewController {
                    self.passwordTextField.text != ""
 
                    {
-                    self.errorLabel.alpha = 1
                     self.errorLabel.textColor = UIColor.red
                     self.errorLabel.text = "Неправильный логин или пароль"
                 } else {
                     print("Jump to the next screen")
-                    self.errorLabel.alpha = 1
                     self.errorLabel.textColor = UIColor.green
                     self.errorLabel.text = "Вы успешно авторизовались"
                     SceneDelegate().checkAuth()
@@ -74,7 +73,24 @@ class AuthInViewController: UIViewController {
     @IBAction func questionPressed(_ sender: Any) {
         SlideCollectionViewCell().rootView(name: "RegisterViewController")
     }
-    @IBAction func Exit(_ unwindSegue: UIStoryboardSegue) {
+}
+extension AuthInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        if (emailTextField.text?.isEmpty ?? true) {
+            passwordTextField.isEnabled = false
+            textField.resignFirstResponder()
+        }
+        else if textField == emailTextField {
+            passwordTextField.isEnabled = true
+            passwordTextField.becomeFirstResponder()
+        }
+        else {
+            textField.resignFirstResponder()
+            loginButtonPressed((Any).self)
+
+        }
+
+        return true
     }
-    
 }

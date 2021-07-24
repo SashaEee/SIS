@@ -79,6 +79,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IRPasscode-swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KeychainAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SIS.xcscheme</key>
 		<dict>
 			<key>isShown</key>

@@ -20,7 +20,7 @@ class Validators {
     }
     
     static func isSimpleEmail(_ email: String) -> Bool {
-        let emailRegEx = "^.+@.+\\..{2,}$"
+        let emailRegEx = "^.+@[sfedu].+\\..{2,}$"
         return check(text: email, regEx: emailRegEx)
     }
     

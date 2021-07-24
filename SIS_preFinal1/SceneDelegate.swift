@@ -2,19 +2,20 @@
 //  SceneDelegate.swift
 //  QR Codes
 //
-//  Created by Kyle Howells on 31/12/2019.
-//  Copyright © 2019 Kyle Howells. All rights reserved.
+//
+//  Created by Sasha
 //
 
 import UIKit
 import Firebase
-
+import IRPasscode_swift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
         checkAuth()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
@@ -28,13 +29,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
 
-        } else {
-            let board = UIStoryboard(name: "Main", bundle: nil)
-            let navigationController = board.instantiateViewController(identifier: "tabbar") as! UITabBarController
-            window?.rootViewController = navigationController
-            window?.makeKeyAndVisible()
-
         }
+//        else {
+//            let board = UIStoryboard(name: "Main", bundle: nil)
+//            let navigationController = board.instantiateViewController(identifier: "tabbar") as! UITabBarController
+//            window?.rootViewController = navigationController
+//            window?.makeKeyAndVisible()
+//
+//        }
 
     }
 

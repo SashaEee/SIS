@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var modeDescriptionViewController: UIViewController!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         FirebaseApp.configure()
         let currentUser = Auth.auth().currentUser
         
@@ -75,6 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     } else {
                         for document in querySnapshot!.documents {
                             ImageURL = document.get("avatarURL") as? String
+                            firstName = document.get("firstname") as? String
+                            lastName = document.get("lastname") as? String
+                            studID = document.get("studID") as? String
                             let url = URL(string: ImageURL!)
                             print(ImageURL!)
                             if let data = try? Data(contentsOf: url!)
@@ -99,15 +103,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let headers: HTTPHeaders = [.authorization(username: user, password: password)]
         
-        //AF.request("https://httpbin.org/basic-auth/user/password", headers: headers)
         let url = "http://api.sync.ictis.sfedu.ru/find/student/email?email=" + email!
         //let url = "http://api.sync.ictis.sfedu.ru/find/student/email?email=azenkovskii@sfedu.ru"
         print ("url \(url)")
         AF.request(url,
                    headers: headers)
             .responseData { response in
-                //debugPrint(response)
-                //print(response["Welcome3"][1])
             }
             .responseJSON { response in
 

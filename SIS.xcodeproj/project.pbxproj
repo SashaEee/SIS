@@ -20,7 +20,16 @@
 		4521171C26A07AFC004DE6D4 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521171B26A07AFC004DE6D4 /* RegViewController.swift */; };
 		4521172026A07F47004DE6D4 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521171E26A07F47004DE6D4 /* SlideCollectionViewCell.swift */; };
 		4521172126A07F47004DE6D4 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */; };
+		45236DC126AAD84D00F02C10 /* CenturyGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45236DC026AAD84D00F02C10 /* CenturyGothic-Bold.ttf */; };
+		45236DC326AAD91600F02C10 /* CenturyGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45236DC226AAD91600F02C10 /* CenturyGothic.ttf */; };
 		45585ACE268B222400726B93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45585ACD268B222400726B93 /* GoogleService-Info.plist */; };
+		457B3C6826ABFF2C00C4209D /* LangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3C6726ABFF2B00C4209D /* LangViewController.swift */; };
+		457B3C9F26AC780600C4209D /* PrivateDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457B3C9B26AC77FD00C4209D /* PrivateDataViewController.xib */; };
+		457B3CA026AC780600C4209D /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3C9C26AC780000C4209D /* PassViewController.swift */; };
+		457B3CA126AC780600C4209D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3C9D26AC780400C4209D /* Utilities.swift */; };
+		457B3CA226AC780600C4209D /* PrivateDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3C9E26AC780600C4209D /* PrivateDataViewController.swift */; };
+		457B3CA726AC89DE00C4209D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3CA626AC89DE00C4209D /* TableViewController.swift */; };
+		457B3CA926AC8BDD00C4209D /* PasswordSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3CA826AC8BDD00C4209D /* PasswordSettingsViewController.swift */; };
 		457CF9B22647E092002AF540 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B626485BC7002AF540 /* AuthViewController.swift */; };
 		458DB86926359EB700AE2AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86826359EB700AE2AA2 /* AppDelegate.swift */; };
@@ -30,8 +39,6 @@
 		458DB87226359EBA00AE2AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458DB87126359EBA00AE2AA2 /* Assets.xcassets */; };
 		458DB87526359EBA00AE2AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458DB87326359EBA00AE2AA2 /* LaunchScreen.storyboard */; };
 		458DB89926359F8000AE2AA2 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */; };
-		45CCE40B26AA075A003CA745 /* CenturyGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45CCE40A26AA075A003CA745 /* CenturyGothic.ttf */; };
-		45CCE40D26AA07EB003CA745 /* CenturyGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45CCE40C26AA07EB003CA745 /* CenturyGothic-Bold.ttf */; };
 		D3BE71D446838E6E061FB30F /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E3DF0D3EBE1285339999D3 /* Pods_SIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,9 +83,18 @@
 		4521171B26A07AFC004DE6D4 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		4521171E26A07F47004DE6D4 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
+		45236DC026AAD84D00F02C10 /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
+		45236DC226AAD91600F02C10 /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CenturyGothic.ttf; sourceTree = "<group>"; };
 		455079B0267CA1E30041C7E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		455079B2267CA2450041C7E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		45585ACD268B222400726B93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		457B3C6726ABFF2B00C4209D /* LangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangViewController.swift; sourceTree = "<group>"; };
+		457B3C9B26AC77FD00C4209D /* PrivateDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivateDataViewController.xib; sourceTree = "<group>"; };
+		457B3C9C26AC780000C4209D /* PassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
+		457B3C9D26AC780400C4209D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		457B3C9E26AC780600C4209D /* PrivateDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateDataViewController.swift; sourceTree = "<group>"; };
+		457B3CA626AC89DE00C4209D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		457B3CA826AC8BDD00C4209D /* PasswordSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingsViewController.swift; sourceTree = "<group>"; };
 		457CF9B626485BC7002AF540 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		458DB86526359EB700AE2AA2 /* SIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458DB86826359EB700AE2AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +105,6 @@
 		458DB87426359EBA00AE2AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458DB87626359EBA00AE2AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
-		45CCE40A26AA075A003CA745 /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CenturyGothic.ttf; sourceTree = "<group>"; };
-		45CCE40C26AA07EB003CA745 /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
 		79AD41EDA5ED4329DCE1EEBE /* Pods-SIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.debug.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +164,26 @@
 			path = Slide;
 			sourceTree = "<group>";
 		};
+		457B3C6626ABFF0600C4209D /* Profile table */ = {
+			isa = PBXGroup;
+			children = (
+				457B3C6726ABFF2B00C4209D /* LangViewController.swift */,
+			);
+			path = "Profile table";
+			sourceTree = "<group>";
+		};
+		457B3C6A26AC5BB400C4209D /* PassCode */ = {
+			isa = PBXGroup;
+			children = (
+				457B3CA826AC8BDD00C4209D /* PasswordSettingsViewController.swift */,
+				457B3C9E26AC780600C4209D /* PrivateDataViewController.swift */,
+				457B3C9B26AC77FD00C4209D /* PrivateDataViewController.xib */,
+				457B3C9D26AC780400C4209D /* Utilities.swift */,
+				457B3C9C26AC780000C4209D /* PassViewController.swift */,
+			);
+			path = PassCode;
+			sourceTree = "<group>";
+		};
 		458DB85C26359EB700AE2AA2 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +208,7 @@
 				458DB86826359EB700AE2AA2 /* AppDelegate.swift */,
 				458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */,
 				458DB86C26359EB700AE2AA2 /* ViewController.swift */,
+				457B3CA626AC89DE00C4209D /* TableViewController.swift */,
 				458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */,
 				458DB86E26359EB700AE2AA2 /* Main.storyboard */,
 				4507C327264A7AF500BBAB64 /* CallendarViewController.swift */,
@@ -181,8 +216,10 @@
 				4507C3252649485B00BBAB64 /* ProfileViewController.swift */,
 				4521171A26A07AC8004DE6D4 /* Controller */,
 				458DB87126359EBA00AE2AA2 /* Assets.xcassets */,
+				457B3C6A26AC5BB400C4209D /* PassCode */,
 				458DB87326359EBA00AE2AA2 /* LaunchScreen.storyboard */,
 				458DB87626359EBA00AE2AA2 /* Info.plist */,
+				457B3C6626ABFF0600C4209D /* Profile table */,
 				45CCE40926AA06EC003CA745 /* fonts */,
 				45585ACD268B222400726B93 /* GoogleService-Info.plist */,
 			);
@@ -192,8 +229,8 @@
 		45CCE40926AA06EC003CA745 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				45CCE40C26AA07EB003CA745 /* CenturyGothic-Bold.ttf */,
-				45CCE40A26AA075A003CA745 /* CenturyGothic.ttf */,
+				45236DC226AAD91600F02C10 /* CenturyGothic.ttf */,
+				45236DC026AAD84D00F02C10 /* CenturyGothic-Bold.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -270,12 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				458DB87526359EBA00AE2AA2 /* LaunchScreen.storyboard in Resources */,
-				45CCE40B26AA075A003CA745 /* CenturyGothic.ttf in Resources */,
 				4521172126A07F47004DE6D4 /* SlideCollectionViewCell.xib in Resources */,
+				457B3C9F26AC780600C4209D /* PrivateDataViewController.xib in Resources */,
+				45236DC326AAD91600F02C10 /* CenturyGothic.ttf in Resources */,
 				45585ACE268B222400726B93 /* GoogleService-Info.plist in Resources */,
 				458DB87226359EBA00AE2AA2 /* Assets.xcassets in Resources */,
 				458DB87026359EB700AE2AA2 /* Main.storyboard in Resources */,
-				45CCE40D26AA07EB003CA745 /* CenturyGothic-Bold.ttf in Resources */,
+				45236DC126AAD84D00F02C10 /* CenturyGothic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457B3C6826ABFF2C00C4209D /* LangViewController.swift in Sources */,
+				457B3CA226AC780600C4209D /* PrivateDataViewController.swift in Sources */,
+				457B3CA026AC780600C4209D /* PassViewController.swift in Sources */,
 				4507C328264A7AF500BBAB64 /* CallendarViewController.swift in Sources */,
 				4519947126A873AE00049738 /* AuthResult.swift in Sources */,
 				458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */,
@@ -342,8 +383,11 @@
 				4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */,
 				4519947526A8770C00049738 /* AuthError.swift in Sources */,
 				458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */,
+				457B3CA726AC89DE00C4209D /* TableViewController.swift in Sources */,
 				4519947326A8769000049738 /* UIViewController + Extension.swift in Sources */,
 				451605DA26A0D22E0011D345 /* AuthInViewController.swift in Sources */,
+				457B3CA926AC8BDD00C4209D /* PasswordSettingsViewController.swift in Sources */,
+				457B3CA126AC780600C4209D /* Utilities.swift in Sources */,
 				4521171C26A07AFC004DE6D4 /* RegViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
