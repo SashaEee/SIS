@@ -15,9 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         checkAuth()
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
     func checkAuth(){
         let currentUser = Auth.auth().currentUser
@@ -30,13 +29,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
 
         }
-//        else {
-//            let board = UIStoryboard(name: "Main", bundle: nil)
-//            let navigationController = board.instantiateViewController(identifier: "tabbar") as! UITabBarController
-//            window?.rootViewController = navigationController
-//            window?.makeKeyAndVisible()
-//
-//        }
+        else {
+            let board = UIStoryboard(name: "Main", bundle: nil)
+            let navigationController = board.instantiateViewController(identifier: "tabbar") as! UITabBarController
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+
+        }
 
     }
 

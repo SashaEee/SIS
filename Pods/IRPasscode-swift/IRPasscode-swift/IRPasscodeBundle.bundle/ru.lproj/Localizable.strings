@@ -1,0 +1,20 @@
+/*
+  Localizable.strings
+  IRPasscode
+
+  Created by Phil on 2019/11/15.
+  Copyright © 2019 Phil. All rights reserved.
+*/
+
+//Security
+"PasscodeLock" = "Блокировка";
+"ChangePasscode" = "Изменить код";
+"EnterPinString" = "Введите код";
+"CreatePinString" = "Установите код";
+"EnterOnceAgainString" = "Подтвердите код";
+"PinsDontMatchTryOnceAgainString" = "Ваши код-пароли не совпадают";
+"CreatePinMsgString" = "Введите код ниже";
+"ConfirmPinMsgString" = "Введите код снова";
+"EnterPinMsgString" = "Введите код ниже";
+"EnterOldPinMsgString" = "Введите старый код ниже";
+"PasscodeHintString" = "Если вы забудете свой пароль, вам придется удалить и переустановить приложение";

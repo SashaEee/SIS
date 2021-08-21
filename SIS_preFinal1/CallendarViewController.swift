@@ -11,22 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 
-var rasp: [[String]]?
-var JSON1: String?
-struct Callendar: Decodable {
-    let table: Table
-    let weeks: [Int]
-}
 
-
-// MARK: - Table
-struct Table: Decodable{
-    let type, name: String
-    let week: Int
-    let group: String
-    let table: [[String]]
-    let link: String
-}
 class CallendarViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     

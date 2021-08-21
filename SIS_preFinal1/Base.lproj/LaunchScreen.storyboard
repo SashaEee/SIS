@@ -32,7 +32,7 @@
                                 <imageReference key="image" image="Image"/>
                                 <imageReference key="highlightedImage" image="Image"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STUDENT IDENTIFY SYSTEM" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne2-ZN-KjT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STUDENT IDENTIFY SYSTEM" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne2-ZN-KjT">
                                 <rect key="frame" x="246" y="400" width="148" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148" id="VXG-L8-mqb"/>

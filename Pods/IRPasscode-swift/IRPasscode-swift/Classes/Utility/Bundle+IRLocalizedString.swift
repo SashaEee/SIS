@@ -56,6 +56,8 @@ extension Bundle {
             } else {
                 language = "zh-Hant"
             }
+        } else if (language != nil) && language!.hasPrefix("ru") {
+            language = "ru"
         } else {
             language = "en"
         }

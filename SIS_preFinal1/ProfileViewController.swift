@@ -41,14 +41,21 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
         
     override func viewDidLoad() {
         UserImage.image = avatar
-        let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
+//        let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
         if (firstNameLabel.text == "Имя") {
-            //signOutButton.title = "Войти"
 
         deleteLabel()
         
         checkAuth()
-        } else {
+        } else if (firstNameLabel.text == "Name"){
+            
+            deleteLabel()
+            
+            checkAuth()
+            
+
+        }
+        else {
            //signOutButton.title = "Выйти"
 
         }
@@ -58,7 +65,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
 
     // Do any additional setup after loading the view.
 }
-    
+    func transliterate(nonLatin: String) -> String {
+        return nonLatin
+            .applyingTransform(.toLatin, reverse: false)?
+            .applyingTransform(.stripDiacritics, reverse: false)?
+            .lowercased()
+            .replacingOccurrences(of: " ", with: "-") ?? nonLatin
+    }
 
     @IBAction func а(_ sender: Any) { //нажимаем на кнопку выхода
         print("B")
@@ -87,6 +100,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
             showLabel()
             hideActivityIndicator()
         }
+            let lang = self.checkLang()
+            if (lang != "ru"){
+                self.firstNameLabel.text = self.transliterate(nonLatin: self.firstNameLabel.text!)
+                self.groupLabel.text = self.transliterate(nonLatin: self.groupLabel.text!)
+            }
         }
         else {
             let user = Auth.auth().currentUser
@@ -104,7 +122,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
                                 self.groupLabel.text = document.get("group") as? String
                                 self.showLabel()
                                 self.hideActivityIndicator()
-
+                                let lang = self.checkLang()
+                                if (lang != "ru"){
+                                    self.firstNameLabel.text = self.transliterate(nonLatin: self.firstNameLabel.text!)
+                                    self.groupLabel.text = self.transliterate(nonLatin: self.groupLabel.text!)
+                                }
                             }
                             
                         }
@@ -112,7 +134,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
             }
         }
     }
-    
+func checkLang() -> String{
+    let preferredLanguage = Locale.preferredLanguages[0] as String
+    print (preferredLanguage) //en-US
+
+    let arr = preferredLanguage.components(separatedBy: "-")
+    let deviceLanguage = arr.first
+    print (deviceLanguage) //en
+    return deviceLanguage!
+}
 func showModalAuth(){ //Показать окно авторизации/регистрации
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let newvc = storyBoard.instantiateViewController(withIdentifier: "AuthInViewController")

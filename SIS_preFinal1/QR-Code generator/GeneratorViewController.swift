@@ -16,7 +16,6 @@ var isVertical : Bool = false
 
 
 class GeneratorViewController: UIViewController, UITextViewDelegate {
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var correctionLevelSegmentControl: UISegmentedControl!
@@ -24,6 +23,7 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var Ractangle: UIImageView!
     @IBOutlet weak var reButton: UIBarButtonItem!
     @IBOutlet weak var UserImage: UIImageView!
+    @IBOutlet weak var ViewAll: UIView!
     
     var textUser: String = "Пользователь не авторизован"
     var myTimer: Timer!
@@ -44,9 +44,9 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
         UserImage.image = avatar
         design()
         designUserImage()
-        //ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
-       // ScreenGuardManager.shared.listenForScreenRecord() //защита от скринов
-       // ScreenGuardManager.shared.guardScreenshot(for: self.view) //защита от скринов
+        ScreenGuardManager.shared.screenRecordDelegate = self //защита от скринов
+        ScreenGuardManager.shared.listenForScreenRecord() //защита от скринов
+        ScreenGuardManager.shared.guardScreenshot(for: ViewAll)
         getFireBase()
         resetTimer()
         self.refreshQRCode()
@@ -75,8 +75,8 @@ class GeneratorViewController: UIViewController, UITextViewDelegate {
     // MARK: - Генерация QR-кода
     
     func refreshQRCode() { //обновление QR-кода
-        self.textView.text = self.textUser
-        let text:String = self.textView.text!
+        self.textView.text! = self.textUser
+        let text:String = self.textUser
         
         // Generate the image
         guard let qrCode:CIImage = self.createQRCodeForString(text) else {

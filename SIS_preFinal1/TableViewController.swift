@@ -1,89 +1,117 @@
 //
-//  TableViewController.swift
+//  ProfileViewController.swift
 //  SIS
 //
-//  Created by Sasha on 7/24/21.
+//  Created by Sasha on 5/10/21.
 //
 
 import UIKit
+import Firebase
+import Alamofire
+import SwiftyJSON
+import IRPasscode_swift
 
-class TableViewController: UITableViewController {
+struct Section{
+    let title: String
+    let options: [SettingsOption]
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+struct SettingsOption{
+    let title: String
+    let icon: UIImage?
+    let iconBackgroundColour: UIColor
+    let handler: (() -> Void)
+}
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    // MARK: - Таблица
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models[section].options.count
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return models.count
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = models[indexPath.section].options[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: SettingsTableViewCell.identifer,
+            for: indexPath) as? SettingsTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: model)
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let model = models[indexPath.section].options[indexPath.row]
+        model.handler()
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    private let tableView: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifer)
+        return table
+    }()
+    var models = [Section]()
+    
+
+    func configure(){
+        if(isTeacher == 0){
+            models.append(Section(title: "Настройки студента", options: [
+                SettingsOption(title: "Количество посещений", icon: UIImage(systemName: "graduationcap"), iconBackgroundColour: .systemIndigo){
+                self.nextNavView(idView: "stat")
+                }
+            ]))
+        }
+        if(isTeacher == 1){
+            models.append(Section(title: "Настройки преподавателя", options: [
+                SettingsOption(title: "Список присутствующих", icon: UIImage(systemName: "graduationcap"), iconBackgroundColour: .systemIndigo){
+                }
+            ]))
+        }
+        models.append(Section(title: "Общие настройки", options: [
+            SettingsOption(title: "Уведомления", icon: UIImage(systemName: "bell.badge"), iconBackgroundColour: .systemRed){
+            self.nextNavView(idView: "notif")
+            },
+            SettingsOption(title: "Безопасность", icon: UIImage(systemName: "lock"), iconBackgroundColour: .systemPink){
+            let xibBundle = Bundle.init(for: IRPasscodeLockSettingViewController.self)
+            let vc = IRPasscodeLockSettingViewController.init(nibName: "IRPasscodeLockSettingViewController", bundle: xibBundle)
+            self.navigationController?.pushViewController(vc, animated: true)
+        },
+            SettingsOption(title: "Внешний вид", icon: UIImage(systemName: "paintbrush.pointed"), iconBackgroundColour: .systemGreen){
+            self.nextNavView(idView: "design")
+            },
+            SettingsOption(title: "Язык", icon: UIImage(systemName: "globe.asia.australia"), iconBackgroundColour: .systemOrange){
+            self.nextNavView(idView: "lang")
+            }
+            ]))
+
+            }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let section = models[section]
+        return section.title
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    func nextNavView(idView: String){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: idView)
+         navigationController?.pushViewController(vc,
+         animated: true)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
+        title = "Settings"
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = view.bounds
+        
     }
-    */
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

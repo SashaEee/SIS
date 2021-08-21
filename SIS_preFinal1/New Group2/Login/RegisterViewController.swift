@@ -20,14 +20,15 @@ class RegisterViewController: UIViewController{
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoButton: UIButton!
     var urlString = ""
-    
+    var window: UIWindow?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapGestureToHideKeyboard()
         photoImageView.layer.cornerRadius = 40
         photoImageView.layer.borderWidth = 0.5
         emailTextField.delegate = self
-        passwordTextField.delegate = self
+        passwordTextField.delegate = self 
     }
     func addTapGestureToHideKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
@@ -104,6 +105,11 @@ class RegisterViewController: UIViewController{
                     switch result {
                         case .success:
                             self.errorLabel.text = "Вы успешно зарегистрированы"
+                        let board = UIStoryboard(name: "Main", bundle: nil)
+                        let navigationController = board.instantiateViewController(identifier: "tabbar") as! UITabBarController
+                        self.window?.rootViewController = navigationController
+                        self.window?.makeKeyAndVisible()
+
                 
                         case .failure(let error):
                             self.showAlert(with: "Ошибка", and: error.localizedDescription)
@@ -142,6 +148,7 @@ class RegisterViewController: UIViewController{
             self.upload(currentUserId: result.user.uid, photo: self.photoImageView.image!) { (myresult) in
                 switch myresult {
                 case .success(let url):
+                    email2 = self.emailTextField.text!
                     self.urlString = url.absoluteString
                     let db = Firestore.firestore()
                     db.collection("users").addDocument(data: [
@@ -156,8 +163,9 @@ class RegisterViewController: UIViewController{
                         if let error = error {
                             completion(.failure(error))
                         }
+                        AppDelegate().authSfedu()
                         completion(.success)
-
+                        self.openView(id: "tabbar")
                     }
                 case .failure(let error):
                     completion(.failure(error))
@@ -167,10 +175,27 @@ class RegisterViewController: UIViewController{
             
         }
     }
-    
+
     @IBAction func signInPressed(_ sender: Any) {
         authSfedu(emailUser: emailTextField.text!)
         ProfileViewController().getUID()
+    }
+    @IBAction func questionButton(_ sender: Any) {
+        openView(id: "AuthInViewController")
+
+    }
+    @IBAction func closeButton(_ sender: Any) {
+        openView(id: "AUTH")
+    }
+    
+    func openView(id: String){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                  let nextVC = storyboard.instantiateViewController(identifier: id)
+                  nextVC.modalPresentationStyle = .fullScreen
+                  nextVC.modalTransitionStyle = .crossDissolve
+
+        self.present(nextVC, animated: true, completion: nil)
+
     }
     
     @IBAction func photoButtonPressed(_ sender: Any) {

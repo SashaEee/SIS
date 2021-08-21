@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4504205D26CF9E34009957A8 /* AuthKey_Z56VXVQM7Y.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 4504205C26CF9E34009957A8 /* AuthKey_Z56VXVQM7Y.p8 */; };
 		4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C3252649485B00BBAB64 /* ProfileViewController.swift */; };
 		4507C328264A7AF500BBAB64 /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4507C327264A7AF500BBAB64 /* CallendarViewController.swift */; };
 		451605D426A08A9D0011D345 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451605D326A08A9D0011D345 /* Model.swift */; };
@@ -22,6 +23,7 @@
 		4521172126A07F47004DE6D4 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */; };
 		45236DC126AAD84D00F02C10 /* CenturyGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45236DC026AAD84D00F02C10 /* CenturyGothic-Bold.ttf */; };
 		45236DC326AAD91600F02C10 /* CenturyGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45236DC226AAD91600F02C10 /* CenturyGothic.ttf */; };
+		452B04E326C95AB8002428C0 /* MicrosoftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B04E226C95AB8002428C0 /* MicrosoftViewController.swift */; };
 		45585ACE268B222400726B93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45585ACD268B222400726B93 /* GoogleService-Info.plist */; };
 		457B3C6826ABFF2C00C4209D /* LangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3C6726ABFF2B00C4209D /* LangViewController.swift */; };
 		457B3C9F26AC780600C4209D /* PrivateDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457B3C9B26AC77FD00C4209D /* PrivateDataViewController.xib */; };
@@ -32,6 +34,7 @@
 		457B3CA926AC8BDD00C4209D /* PasswordSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B3CA826AC8BDD00C4209D /* PasswordSettingsViewController.swift */; };
 		457CF9B22647E092002AF540 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457CF9B626485BC7002AF540 /* AuthViewController.swift */; };
+		4581FAAD26B30321000488F0 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4581FAAC26B30321000488F0 /* SettingsTableViewCell.swift */; };
 		458DB86926359EB700AE2AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86826359EB700AE2AA2 /* AppDelegate.swift */; };
 		458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */; };
 		458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB86C26359EB700AE2AA2 /* ViewController.swift */; };
@@ -39,6 +42,8 @@
 		458DB87226359EBA00AE2AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458DB87126359EBA00AE2AA2 /* Assets.xcassets */; };
 		458DB87526359EBA00AE2AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458DB87326359EBA00AE2AA2 /* LaunchScreen.storyboard */; };
 		458DB89926359F8000AE2AA2 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */; };
+		459FD4D326C28EB200ED5E50 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FD4D226C28EB200ED5E50 /* Calendar.swift */; };
+		459FD4D526C2A90700ED5E50 /* Calendar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FD4D426C2A90700ED5E50 /* Calendar1.swift */; };
 		D3BE71D446838E6E061FB30F /* Pods_SIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E3DF0D3EBE1285339999D3 /* Pods_SIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,8 @@
 		01E3DF0D3EBE1285339999D3 /* Pods_SIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1067DC6C6D97E7921FFF4CE5 /* Pods-SIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.release.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.release.xcconfig"; sourceTree = "<group>"; };
 		1F4D16EAE2A8A98E497AEE09 /* Pods_SIS_Watch_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIS_Watch_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4504205B26CF88CE009957A8 /* SIS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SIS.entitlements; sourceTree = "<group>"; };
+		4504205C26CF9E34009957A8 /* AuthKey_Z56VXVQM7Y.p8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AuthKey_Z56VXVQM7Y.p8; sourceTree = "<group>"; };
 		4507C3252649485B00BBAB64 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4507C327264A7AF500BBAB64 /* CallendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
 		451605D326A08A9D0011D345 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -79,15 +86,17 @@
 		4519946E26A8732000049738 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		4519947026A873AD00049738 /* AuthResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResult.swift; sourceTree = "<group>"; };
 		4519947226A8769000049738 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
-		4519947426A8770C00049738 /* AuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthError.swift; path = "../../../../Downloads/108. iOS 13 Xcode 11 Firebase storage/Конечный проект/FirebaseWebinar/Helpers/AuthError.swift"; sourceTree = "<group>"; };
+		4519947426A8770C00049738 /* AuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		4521171B26A07AFC004DE6D4 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		4521171E26A07F47004DE6D4 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		4521171F26A07F47004DE6D4 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		45236DC026AAD84D00F02C10 /* CenturyGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CenturyGothic-Bold.ttf"; sourceTree = "<group>"; };
 		45236DC226AAD91600F02C10 /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CenturyGothic.ttf; sourceTree = "<group>"; };
-		455079B0267CA1E30041C7E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		452B04E226C95AB8002428C0 /* MicrosoftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MicrosoftViewController.swift; path = "/Users/air/SIS-FINAL/MicrosoftViewController.swift"; sourceTree = "<absolute>"; };
 		455079B2267CA2450041C7E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		45585ACD268B222400726B93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		456BC7B526AD4DC60066CA0F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		456BC7B626AD4DC70066CA0F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		457B3C6726ABFF2B00C4209D /* LangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangViewController.swift; sourceTree = "<group>"; };
 		457B3C9B26AC77FD00C4209D /* PrivateDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivateDataViewController.xib; sourceTree = "<group>"; };
 		457B3C9C26AC780000C4209D /* PassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
@@ -96,15 +105,18 @@
 		457B3CA626AC89DE00C4209D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		457B3CA826AC8BDD00C4209D /* PasswordSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSettingsViewController.swift; sourceTree = "<group>"; };
 		457CF9B626485BC7002AF540 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		4581FAAC26B30321000488F0 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		458DB86526359EB700AE2AA2 /* SIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458DB86826359EB700AE2AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		458DB86C26359EB700AE2AA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		458DB86C26359EB700AE2AA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.plist; };
 		458DB86F26359EB700AE2AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		458DB87126359EBA00AE2AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458DB87426359EBA00AE2AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458DB87626359EBA00AE2AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		459FD4D226C28EB200ED5E50 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		459FD4D426C2A90700ED5E50 /* Calendar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar1.swift; sourceTree = "<group>"; };
 		79AD41EDA5ED4329DCE1EEBE /* Pods-SIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIS.debug.xcconfig"; path = "Target Support Files/Pods-SIS/Pods-SIS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +176,14 @@
 			path = Slide;
 			sourceTree = "<group>";
 		};
+		456BC79626AD3A560066CA0F /* QR-Code generator */ = {
+			isa = PBXGroup;
+			children = (
+				458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */,
+			);
+			path = "QR-Code generator";
+			sourceTree = "<group>";
+		};
 		457B3C6626ABFF0600C4209D /* Profile table */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +207,9 @@
 		458DB85C26359EB700AE2AA2 = {
 			isa = PBXGroup;
 			children = (
+				4504205C26CF9E34009957A8 /* AuthKey_Z56VXVQM7Y.p8 */,
+				4504205B26CF88CE009957A8 /* SIS.entitlements */,
+				452B04E226C95AB8002428C0 /* MicrosoftViewController.swift */,
 				458DB86626359EB700AE2AA2 /* Products */,
 				458DB86726359EB700AE2AA2 /* SIS_preFinal1 */,
 				88A67E60630B4F346F423D3D /* Pods */,
@@ -209,8 +232,11 @@
 				458DB86A26359EB700AE2AA2 /* SceneDelegate.swift */,
 				458DB86C26359EB700AE2AA2 /* ViewController.swift */,
 				457B3CA626AC89DE00C4209D /* TableViewController.swift */,
-				458DB89826359F8000AE2AA2 /* GeneratorViewController.swift */,
+				456BC79626AD3A560066CA0F /* QR-Code generator */,
 				458DB86E26359EB700AE2AA2 /* Main.storyboard */,
+				459FD4D226C28EB200ED5E50 /* Calendar.swift */,
+				459FD4D426C2A90700ED5E50 /* Calendar1.swift */,
+				4581FAAC26B30321000488F0 /* SettingsTableViewCell.swift */,
 				4507C327264A7AF500BBAB64 /* CallendarViewController.swift */,
 				457CF9B626485BC7002AF540 /* AuthViewController.swift */,
 				4507C3252649485B00BBAB64 /* ProfileViewController.swift */,
@@ -258,6 +284,7 @@
 				457CF9B32647E092002AF540 /* Embed Frameworks */,
 				45BC59912680AF5E00C699EE /* Embed Watch Content */,
 				FB0779B3B8733ED5DAE6B791 /* [CP] Embed Pods Frameworks */,
+				D1F0BA3607D2129DFFF9203B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,7 +310,7 @@
 				};
 			};
 			buildConfigurationList = 458DB86026359EB700AE2AA2 /* Build configuration list for PBXProject "SIS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -310,6 +337,7 @@
 				4521172126A07F47004DE6D4 /* SlideCollectionViewCell.xib in Resources */,
 				457B3C9F26AC780600C4209D /* PrivateDataViewController.xib in Resources */,
 				45236DC326AAD91600F02C10 /* CenturyGothic.ttf in Resources */,
+				4504205D26CF9E34009957A8 /* AuthKey_Z56VXVQM7Y.p8 in Resources */,
 				45585ACE268B222400726B93 /* GoogleService-Info.plist in Resources */,
 				458DB87226359EBA00AE2AA2 /* Assets.xcassets in Resources */,
 				458DB87026359EB700AE2AA2 /* Main.storyboard in Resources */,
@@ -342,6 +370,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D1F0BA3607D2129DFFF9203B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIS/Pods-SIS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIS/Pods-SIS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIS/Pods-SIS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB0779B3B8733ED5DAE6B791 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,7 +413,9 @@
 			files = (
 				457B3C6826ABFF2C00C4209D /* LangViewController.swift in Sources */,
 				457B3CA226AC780600C4209D /* PrivateDataViewController.swift in Sources */,
+				4581FAAD26B30321000488F0 /* SettingsTableViewCell.swift in Sources */,
 				457B3CA026AC780600C4209D /* PassViewController.swift in Sources */,
+				459FD4D326C28EB200ED5E50 /* Calendar.swift in Sources */,
 				4507C328264A7AF500BBAB64 /* CallendarViewController.swift in Sources */,
 				4519947126A873AE00049738 /* AuthResult.swift in Sources */,
 				458DB86D26359EB700AE2AA2 /* ViewController.swift in Sources */,
@@ -376,6 +423,7 @@
 				4521172026A07F47004DE6D4 /* SlideCollectionViewCell.swift in Sources */,
 				451605D626A0CF2F0011D345 /* SliderSliders.swift in Sources */,
 				451605D826A0D2070011D345 /* RegisterViewController.swift in Sources */,
+				452B04E326C95AB8002428C0 /* MicrosoftViewController.swift in Sources */,
 				451605D426A08A9D0011D345 /* Model.swift in Sources */,
 				4519946F26A8732000049738 /* Validators.swift in Sources */,
 				457CF9B726485BC7002AF540 /* AuthViewController.swift in Sources */,
@@ -383,6 +431,7 @@
 				4507C3262649485B00BBAB64 /* ProfileViewController.swift in Sources */,
 				4519947526A8770C00049738 /* AuthError.swift in Sources */,
 				458DB86B26359EB700AE2AA2 /* SceneDelegate.swift in Sources */,
+				459FD4D526C2A90700ED5E50 /* Calendar1.swift in Sources */,
 				457B3CA726AC89DE00C4209D /* TableViewController.swift in Sources */,
 				4519947326A8769000049738 /* UIViewController + Extension.swift in Sources */,
 				451605DA26A0D22E0011D345 /* AuthInViewController.swift in Sources */,
@@ -399,8 +448,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				458DB86F26359EB700AE2AA2 /* Base */,
-				455079B0267CA1E30041C7E5 /* ru */,
 				455079B2267CA2450041C7E5 /* en */,
+				456BC7B526AD4DC60066CA0F /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -409,6 +458,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				458DB87426359EBA00AE2AA2 /* Base */,
+				456BC7B626AD4DC70066CA0F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -540,8 +590,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SIS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 87V3R938U4;
+				DEVELOPMENT_TEAM = 4923GA7LPV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -552,7 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = SFEDU;
+				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -565,8 +616,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SIS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 87V3R938U4;
+				DEVELOPMENT_TEAM = 4923GA7LPV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -577,7 +629,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = SFEDU;
+				PRODUCT_BUNDLE_IDENTIFIER = SFEDU.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
