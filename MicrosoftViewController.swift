@@ -30,27 +30,29 @@ class MicrosoftViewController: UIViewController {
 
         provider?.getCredentialWith(nil ) { credential, error in
             if error != nil {
-                // Handle error.
+                print(error)
             }
 
             print(credential?.provider)
+            
             
             Auth.auth().signIn(withEmail: self.emailTextField.text!, password: "12345678")
 
             if let x = credential {
                 self.authMicrosoft?.signIn(with: x) { authResult, error in
                     if error != nil {
-                        // Handle error.
+                        print ("error")
                     }
 
 
                     print(authResult?.additionalUserInfo?.profile)
                     print(authResult?.user.providerID)
+                    print(error)
 
 
                 }
             } else{
-
+                print ("else")
             }
 
         }

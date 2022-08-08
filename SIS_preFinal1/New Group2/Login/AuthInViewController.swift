@@ -79,9 +79,7 @@ class AuthInViewController: UIViewController {
     
     func authMicro(){
         
-        
         provider = OAuthProvider(providerID: "microsoft.com")
-
 
        provider?.customParameters = [
            "prompt": "consent",
@@ -92,16 +90,15 @@ class AuthInViewController: UIViewController {
 
        provider?.scopes = ["mail.read", "calendars.read"]
 
-
-
-
        provider?.getCredentialWith(nil ) { credential, error in
            if error != nil {
-               // Handle error.
+               print("Error 2")
+               print (error)
            }
 
            print(credential?.provider)
-           
+           print (error)
+
            Auth.auth().signIn(withEmail: self.emailTextField.text!, password: "12345678"){ result, error in
                if error != nil,
                   self.emailTextField.text != "",
@@ -124,7 +121,8 @@ class AuthInViewController: UIViewController {
            if let x = credential {
                self.authMicrosoft?.signIn(with: x) { authResult, error in
                    if error != nil {
-                       // Handle error.
+                       print("Error 1")
+                       print (error)
                    }
 
 

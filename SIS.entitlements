@@ -4,5 +4,10 @@
 <dict>
 	<key>aps-environment</key>
 	<string>development</string>
+	<key>com.apple.developer.user-fonts</key>
+	<array>
+		<string>app-usage</string>
+		<string>system-installation</string>
+	</array>
 </dict>
 </plist>

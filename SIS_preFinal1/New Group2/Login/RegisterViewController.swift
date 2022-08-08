@@ -10,6 +10,9 @@ import Firebase
 import FirebaseStorage
 import SwiftyJSON
 import Alamofire
+import FirebaseMessaging
+
+//let token = Messaging.messaging().fcmToken
 
 class RegisterViewController: UIViewController{
 
@@ -21,7 +24,10 @@ class RegisterViewController: UIViewController{
     @IBOutlet weak var photoButton: UIButton!
     var urlString = ""
     var window: UIWindow?
+    var provider: OAuthProvider?
+    var authMicrosoft: Auth?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addTapGestureToHideKeyboard()
@@ -30,6 +36,7 @@ class RegisterViewController: UIViewController{
         emailTextField.delegate = self
         passwordTextField.delegate = self 
     }
+    
     func addTapGestureToHideKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
         view.addGestureRecognizer(tapGesture)
@@ -101,7 +108,7 @@ class RegisterViewController: UIViewController{
                 }
                 if (firstName != nil){
 
-                    self.register(email: self.emailTextField.text, password: self.passwordTextField.text) { (result) in
+                    self.register(email: self.emailTextField.text, password: "12345678") { (result) in
                     switch result {
                         case .success:
                             self.errorLabel.text = "Вы успешно зарегистрированы"
@@ -145,6 +152,7 @@ class RegisterViewController: UIViewController{
                 completion(.failure(error!))
                 return
             }
+            print("Stroka \(result)")
             self.upload(currentUserId: result.user.uid, photo: self.photoImageView.image!) { (myresult) in
                 switch myresult {
                 case .success(let url):
@@ -158,14 +166,17 @@ class RegisterViewController: UIViewController{
                         "avatarURL": url.absoluteString,
                         "uid": result.user.uid,
                         "email": self.emailTextField.text!,
-                        "uidDevice": UID!
+                        "uidDevice": UID!,
+//                        "DeviceToken": deviceToken1!
+                        
                     ]) { (error) in
                         if let error = error {
                             completion(.failure(error))
                         }
                         AppDelegate().authSfedu()
                         completion(.success)
-                        self.openView(id: "tabbar")
+                        self.microsoftget()
+//                        self.openView(id: "tabbar")
                     }
                 case .failure(let error):
                     completion(.failure(error))
@@ -175,6 +186,30 @@ class RegisterViewController: UIViewController{
             
         }
     }
+    func microsoftget(){
+        provider = OAuthProvider(providerID: "microsoft.com")
+
+        provider?.customParameters = [
+            "prompt": "consent",
+            "login_hint": emailTextField.text!,
+        ]
+        provider?.scopes = ["mail.read", "calendars.read"]
+        
+        
+        provider?.getCredentialWith(nil ) { credential, error in
+            if error != nil {
+                print("Error 2")
+                print (error)
+            }
+
+            print(credential?.provider)
+            print(credential)
+            Auth.auth().currentUser?.link(with: credential!){ authResult, error in
+                print (error)
+            }
+        }
+    }
+        
 
     @IBAction func signInPressed(_ sender: Any) {
         authSfedu(emailUser: emailTextField.text!)

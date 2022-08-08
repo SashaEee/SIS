@@ -59,16 +59,17 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 
     func configure(){
-        if(isTeacher == 0){
+        if ((isTeacher! == 0)&&(studID != "000329340")){
             models.append(Section(title: "Настройки студента", options: [
                 SettingsOption(title: "Количество посещений", icon: UIImage(systemName: "graduationcap"), iconBackgroundColour: .systemIndigo){
-                self.nextNavView(idView: "stat")
+                self.nextNavView(idView: "statStudent")
                 }
             ]))
         }
-        if(isTeacher == 1){
+        if ((isTeacher! == 1)||(studID == "000329340")){
             models.append(Section(title: "Настройки преподавателя", options: [
                 SettingsOption(title: "Список присутствующих", icon: UIImage(systemName: "graduationcap"), iconBackgroundColour: .systemIndigo){
+                    self.nextNavView(idView: "statTeacher")
                 }
             ]))
         }

@@ -25,6 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
             let board = UIStoryboard(name: "Main", bundle: nil)
             let navigationController = board.instantiateViewController(identifier: "AUTH")
+//            let navigationController = board.instantiateViewController(identifier: "stat")
+
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
 

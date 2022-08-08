@@ -23,6 +23,7 @@ pod 'SwiftyJSON'
 pod 'CryptoSwift'
 pod 'IRPasscode-swift'
 pod 'CalendarKit'
+pod 'Firebase/Messaging'
 
 
 # add pods for any other desired Firebase products

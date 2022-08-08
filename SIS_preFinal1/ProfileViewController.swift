@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 import Alamofire
 import SwiftyJSON
+
+
 let db = Firestore.firestore()
 // MARK: - Welcome6
 struct UserData: Decodable{
@@ -85,7 +87,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
         showActivityIndicator()
         if (firstName != nil){
             firstNameLabel.text = firstName! + " " + lastName!
-            if (isTeacher! != 1){
+            if ((isTeacher! != 1)&&(studID != "000329340")){
             var group1 = levelLearn![(levelLearn?.startIndex)!]
             if (group1 == "Б"){ group1 = "б"}
             if (group1 == "М"){ group1 = "м"}

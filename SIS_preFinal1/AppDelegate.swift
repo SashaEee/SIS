@@ -28,15 +28,16 @@ var middlename: String?
 var UID: String?
 var ImageURL: String?
 var avatar: UIImage?
+var deviceToken1: String?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     var modeDescriptionViewController: UIViewController!
 
+    
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
         FirebaseApp.configure()
         let currentUser = Auth.auth().currentUser
         
@@ -147,30 +148,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
     func requestParse(){
-            let url1 = "http://ictis.sfedu.ru/schedule-api/?query=" + "КТ" + "\(levelLearn![(levelLearn?.startIndex)!])" + "о" + grade! + "-" + stGroup!
-        let url = url1.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        AF.request(String(url!)).responseJSON { response in
-            let json = JSON(response.data as Any)
-            print(json)
-            guard let data = response.data else {return}
-            do
-            {
-                let call = try JSONDecoder().decode(Callendar.self, from: data)
-                print(call)
-                rasp = call.table.table
-            }
-            catch {
-                print("1")
-            }
-
-        }
-        .responseString{
-            response in
-            JSON1 = response.value
-            print("JSONNNNNN: \(String(describing: JSON1))")
-            
-        }
-
     }
     
     func registerForPushNotifications() {
@@ -194,15 +171,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let tokenParts = deviceToken.map { data -> String in
         return String(format: "%02.2hhx", data)
       }
-      
-      let token = tokenParts.joined()
-      print("Device Token: \(token)")
+//        deviceToken1 = "nil"
+//      let token = tokenParts.joined()
+//      print("Device Token: \(token)")
+//        deviceToken1 = token
     }
 
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
       print("Failed to register: \(error)")
     }
+
 
 
     
